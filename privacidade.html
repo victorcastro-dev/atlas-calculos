@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Política de Privacidade | Atlas Cálculos Trabalhistas</title>
+<meta name="description" content="Política de Privacidade da Atlas Cálculos Trabalhistas. Saiba como tratamos seus dados pessoais em conformidade com a LGPD."/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#0d0e0e"/>
+<link rel="canonical" href="https://atlascalculos.com.br/privacidade.html"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Crect width='52' height='52' rx='8' fill='%230d0e0e'/%3E%3Cpolygon points='26,8 8,42 44,42' fill='none' stroke='%23c9a84c' stroke-width='2.5' stroke-linejoin='round'/%3E%3Cline x1='15' y1='30' x2='37' y2='30' stroke='%23c9a84c' stroke-width='2'/%3E%3Ccircle cx='26' cy='8' r='2.5' fill='%23c9a84c'/%3E%3C/svg%3E"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --bg:      #0d0e0e;
+    --bg2:     #131415;
+    --bg3:     #181919;
+    --border:  rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --gold:    #c9a84c;
+    --gold2:   #e8c96e;
+    --text:    #e6e4de;
+    --muted:   #888480;
+    --faint:   #363330;
+    --serif:   'Cormorant Garamond', Georgia, serif;
+    --sans:    'DM Sans', sans-serif;
+    --max:     1160px;
+    --px:      clamp(24px, 5vw, 80px);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: 76px;
+    background: rgba(13,14,14,0.93);
+    backdrop-filter: blur(14px);
+    border-bottom: 0.5px solid var(--border);
+  }
+  .nav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-logo { display: flex; align-items: center; text-decoration: none; }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
+  .nav-phone {
+    font-size: 12px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.18s;
+  }
+  .nav-phone:hover { color: var(--text); }
+  .nav-phone-dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+  .nav-cta {
+    display: inline-block;
+    padding: 9px 22px;
+    border: 0.5px solid var(--gold);
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background 0.18s, color 0.18s;
+  }
+  .nav-cta:hover { background: var(--gold); color: #0d0e0e; }
+
+  /* ── CONTENT ── */
+  .page-content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 148px var(--px) 80px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: '';
+    display: block;
+    width: 24px; height: 0.5px;
+    background: var(--gold);
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+  }
+  .updated {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 0.5px solid var(--border);
+  }
+  .section-block { margin-bottom: 36px; }
+  .section-block h2 {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 1.25;
+  }
+  .section-block p {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.85;
+    margin-bottom: 8px;
+  }
+  .section-block a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 0.5px solid var(--border);
+    font-size: 13px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    transition: color 0.18s;
+  }
+  .back-link:hover { color: var(--text); }
+  .back-arrow {
+    font-size: 16px;
+    transition: transform 0.18s;
+  }
+  .back-link:hover .back-arrow { transform: translateX(-3px); }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 0.5px solid var(--border);
+    padding: 28px 0;
+  }
+  .footer-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer-logo { font-family: var(--serif); font-size: 16px; font-weight: 600; }
+  .footer-logo span { color: var(--gold); }
+  .footer-meta { display: flex; gap: 32px; align-items: center; }
+  footer p, .footer-meta a { font-size: 12px; color: var(--muted); }
+
+  @media (max-width: 768px) {
+    .nav-phone { display: none; }
+    .footer-inner { flex-direction: column; text-align: center; }
+    .footer-meta { flex-direction: column; gap: 8px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg width="190" height="44" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="26,6 6,44 46,44" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linejoin="round"/>
+        <line x1="14" y1="31" x2="38" y2="31" stroke="#c9a84c" stroke-width="2.2"/>
+        <circle cx="26" cy="6" r="2.6" fill="#c9a84c"/>
+        <line x1="2" y1="47" x2="50" y2="47" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+        <line x1="10" y1="44" x2="42" y2="44" stroke="#c9a84c" stroke-width="1.6"/>
+        <text x="62" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#c9a84c" letter-spacing="3">Atlas</text>
+        <text x="130" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#e6e4de" letter-spacing="1">Cálculos</text>
+        <text x="63" y="43" font-family="'DM Sans', sans-serif" font-size="9.5" font-weight="500" fill="#888480" letter-spacing="4">TRABALHISTAS</text>
+      </svg>
+    </a>
+    <div class="nav-right">
+      <a href="tel:+5511983458646" class="nav-phone">
+        <span class="nav-phone-dot"></span>
+        (11) 98345-8646
+      </a>
+      <a href="https://wa.me/5511983458646" class="nav-cta" target="_blank">Solicitar análise</a>
+    </div>
+  </div>
+</nav>
+
+<!-- CONTENT -->
+<main class="page-content">
+  <p class="eyebrow">Legal</p>
+  <h1>Política de Privacidade</h1>
+  <p class="updated">Última atualização: março de 2026</p>
+
+  <div class="section-block">
+    <h2>1. Responsável pelo tratamento</h2>
+    <p>Atlas Cálculos Trabalhistas, com base operacional em São Paulo/SP. Contato para questões relacionadas a dados pessoais: <a href="mailto:contato@atlascalculos.com.br">contato@atlascalculos.com.br</a>.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>2. Dados coletados</h2>
+    <p>Coletamos apenas os dados estritamente necessários para a prestação dos serviços: nome, nome do escritório, telefone, e-mail e informações relativas ao caso encaminhado. Dados de navegação (cookies analíticos) podem ser coletados para melhoria do site.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>3. Finalidade do tratamento</h2>
+    <p>Os dados pessoais são utilizados exclusivamente para: atendimento e comunicação sobre os serviços solicitados; triagem técnica e execução dos cálculos; análise de desempenho do site (dados anonimizados).</p>
+  </div>
+
+  <div class="section-block">
+    <h2>4. Compartilhamento</h2>
+    <p>Os dados pessoais não são vendidos, cedidos ou compartilhados com terceiros, exceto quando necessário para o cumprimento de obrigação legal ou regulatória.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>5. Cookies</h2>
+    <p>Este site utiliza cookies essenciais para funcionamento e cookies analíticos (como Google Analytics) para compreender o uso do site. Você pode recusar cookies não essenciais através do banner exibido no acesso ao site.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>6. Armazenamento e segurança</h2>
+    <p>Os dados são armazenados em ambiente seguro e mantidos apenas pelo tempo necessário ao atendimento da finalidade para a qual foram coletados, respeitando os prazos legais aplicáveis.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>7. Direitos do titular</h2>
+    <p>Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018), você pode solicitar acesso, correção, anonimização, portabilidade ou eliminação dos seus dados pessoais a qualquer momento, entrando em contato pelo e-mail <a href="mailto:contato@atlascalculos.com.br">contato@atlascalculos.com.br</a>.</p>
+  </div>
+
+  <div class="section-block">
+    <h2>8. Alterações</h2>
+    <p>Esta política pode ser atualizada periodicamente. Recomendamos a consulta regular desta página para ciência de eventuais alterações.</p>
+  </div>
+
+  <a href="index.html" class="back-link">
+    <span class="back-arrow">←</span>
+    Voltar ao site
+  </a>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <a href="index.html" style="display:flex; align-items:center; text-decoration:none;">
+      <svg width="160" height="38" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="26,6 6,44 46,44" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linejoin="round"/>
+        <line x1="14" y1="31" x2="38" y2="31" stroke="#c9a84c" stroke-width="1.8"/>
+        <circle cx="26" cy="6" r="2.2" fill="#c9a84c"/>
+        <line x1="2" y1="47" x2="50" y2="47" stroke="#c9a84c" stroke-width="0.6" opacity="0.4"/>
+        <line x1="10" y1="44" x2="42" y2="44" stroke="#c9a84c" stroke-width="1.4"/>
+        <text x="62" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#c9a84c" letter-spacing="3">Atlas</text>
+        <text x="130" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="500" fill="#e6e4de" letter-spacing="1">Cálculos</text>
+        <text x="63" y="43" font-family="'DM Sans', sans-serif" font-size="9" font-weight="400" fill="#555250" letter-spacing="4">TRABALHISTAS</text>
+      </svg>
+    </a>
+    <div class="footer-meta">
+      <p>Base em São Paulo · Atendimento nacional remoto</p>
+      <p>© 2026 Atlas Cálculos Trabalhistas</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
