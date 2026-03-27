@@ -816,11 +816,16 @@
   @media (max-width: 768px) {
     .nav-links { display: none; }
     .nav-phone { display: none; }
+    .hero { justify-content: center; padding-top: 100px; }
+    .hero-body { padding-bottom: 32px; }
+    .hero h1 { font-size: clamp(36px, 8vw, 52px); }
     .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 0; }
     .stat { border-right: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 20px; }
+    .stat:first-child { padding-left: 20px; }
     .stat:nth-child(2) { border-right: none; }
     .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
     .stat + .stat { padding-left: 20px; }
+    .stat-num { font-size: 30px; }
     .services-grid { grid-template-columns: 1fr; }
     .trust-grid { grid-template-columns: 1fr; gap: 36px; }
     .process-steps { grid-template-columns: 1fr; }
@@ -1404,12 +1409,20 @@
   }
 
   /* ── LGPD Cookie Banner ── */
-  (function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var banner = document.getElementById('lgpd-banner');
-    if (!localStorage.getItem('atlas_lgpd')) {
+    if (banner && !localStorage.getItem('atlas_lgpd')) {
       banner.style.display = 'block';
     }
-  })();
+
+    /* ── Privacy Modal ── */
+    var privModal = document.getElementById('privacidade-modal');
+    if (privModal) {
+      privModal.addEventListener('click', function(e) {
+        if (e.target === this) this.style.display = 'none';
+      });
+    }
+  });
   function lgpdAccept() {
     localStorage.setItem('atlas_lgpd', 'accepted');
     document.getElementById('lgpd-banner').style.display = 'none';
@@ -1419,40 +1432,37 @@
     document.getElementById('lgpd-banner').style.display = 'none';
   }
 
-  /* ── Privacy Modal ── */
-  document.getElementById('privacidade-modal').addEventListener('click', function(e) {
-    if (e.target === this) this.style.display = 'none';
-  });
-
   /* ── GA4: Rastrear cliques no WhatsApp como conversão ── */
-  document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      gtag('event', 'whatsapp_click', {
-        event_category: 'conversao',
-        event_label: this.textContent.trim() || 'WhatsApp',
-        transport_type: 'beacon'
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'whatsapp_click', {
+          event_category: 'conversao',
+          event_label: this.textContent.trim() || 'WhatsApp',
+          transport_type: 'beacon'
+        });
       });
     });
-  });
 
-  /* ── GA4: Rastrear cliques no telefone ── */
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      gtag('event', 'phone_click', {
-        event_category: 'conversao',
-        event_label: 'Telefone',
-        transport_type: 'beacon'
+    /* ── GA4: Rastrear cliques no telefone ── */
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'phone_click', {
+          event_category: 'conversao',
+          event_label: 'Telefone',
+          transport_type: 'beacon'
+        });
       });
     });
-  });
 
-  /* ── GA4: Rastrear cliques no e-mail ── */
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      gtag('event', 'email_click', {
-        event_category: 'conversao',
-        event_label: 'Email',
-        transport_type: 'beacon'
+    /* ── GA4: Rastrear cliques no e-mail ── */
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        gtag('event', 'email_click', {
+          event_category: 'conversao',
+          event_label: 'Email',
+          transport_type: 'beacon'
+        });
       });
     });
   });
