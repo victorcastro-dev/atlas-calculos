@@ -228,7 +228,7 @@
         <span class="nav-phone-dot"></span>
         (11) 92687-6472
       </a>
-      <a href="https://wa.me/5511926876472" class="nav-cta" target="_blank">Solicitar análise</a>
+      <a href="https://wa.me/5511926876472" class="nav-cta" target="_blank" data-whatsapp-label="privacidade_solicitar_analise">Solicitar análise</a>
     </div>
   </div>
 </nav>
@@ -307,5 +307,69 @@
   </div>
 </footer>
 
+<script>
+  function isWhatsAppUrl(url) {
+    return /(?:wa\.me|api\.whatsapp\.com|whatsapp\.com)/i.test(url || '');
+  }
+
+  function getWhatsAppLabel(element, fallbackLabel) {
+    if (element) {
+      var explicitLabel = element.getAttribute('data-whatsapp-label');
+      if (explicitLabel) return explicitLabel;
+
+      var ariaLabel = element.getAttribute('aria-label');
+      if (ariaLabel) return ariaLabel.trim();
+
+      var text = element.textContent ? element.textContent.replace(/\s+/g, ' ').trim() : '';
+      if (text) return text;
+    }
+
+    return fallbackLabel || 'whatsapp';
+  }
+
+  function trackWhatsAppClick(label) {
+    if (typeof gtag !== 'function') return;
+
+    gtag('event', 'whatsapp_click', {
+      event_category: 'conversao',
+      event_label: label || 'whatsapp',
+      transport_type: 'beacon'
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href]').forEach(function(link) {
+      var href = link.getAttribute('href') || '';
+
+      if (isWhatsAppUrl(href)) {
+        link.addEventListener('click', function() {
+          trackWhatsAppClick(getWhatsAppLabel(this));
+        });
+        return;
+      }
+
+      if (href.indexOf('tel:') === 0) {
+        link.addEventListener('click', function() {
+          gtag('event', 'phone_click', {
+            event_category: 'conversao',
+            event_label: 'Telefone',
+            transport_type: 'beacon'
+          });
+        });
+        return;
+      }
+
+      if (href.indexOf('mailto:') === 0) {
+        link.addEventListener('click', function() {
+          gtag('event', 'email_click', {
+            event_category: 'conversao',
+            event_label: 'Email',
+            transport_type: 'beacon'
+          });
+        });
+      }
+    });
+  });
+</script>
 </body>
 </html>
