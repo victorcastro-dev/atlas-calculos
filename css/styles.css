@@ -975,26 +975,46 @@ strong {
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-2xl);
+  gap: clamp(32px, 5vw, var(--space-2xl));
   align-items: center;
+}
+
+.testimonials__intro {
+  display: grid;
+  align-content: start;
+  gap: clamp(10px, 1.4vw, 18px);
+  max-width: min(100%, 29rem);
+}
+
+.testimonials__intro .section-header__label {
+  margin-bottom: 0;
 }
 
 @media (min-width: 1024px) {
   .testimonials__grid {
-    grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
-    gap: var(--space-4xl);
+    grid-template-columns: minmax(0, 370px) minmax(0, 1fr);
+    gap: clamp(56px, 5vw, var(--space-4xl));
+  }
+
+  .testimonials__intro {
+    align-self: start;
+    padding-top: clamp(18px, 2vw, 34px);
   }
 }
 
 .testimonials__title {
-  margin-bottom: var(--space-md);
-  max-width: 12ch;
+  margin-bottom: 0;
+  max-width: 13.5ch;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 .testimonials__lead {
-  max-width: 40ch;
-  font-size: 1rem;
-  line-height: 1.78;
+  max-width: 34ch;
+  font-size: clamp(0.98rem, 1.05vw, 1.05rem);
+  line-height: 1.68;
+  text-wrap: pretty;
 }
 
 .testimonial-carousel {
@@ -1203,6 +1223,34 @@ strong {
 }
 
 @media (max-width: 767px) {
+  .testimonials__grid {
+    gap: 28px;
+  }
+
+  .testimonials__intro {
+    justify-self: center;
+    width: 100%;
+    max-width: min(100%, 30rem);
+    gap: 14px;
+    margin-inline: auto;
+    padding-inline: 0;
+    text-align: center;
+  }
+
+  .testimonials__title {
+    max-width: 9.5ch;
+    margin-inline: auto;
+    font-size: clamp(2.15rem, 11vw, 2.85rem);
+    line-height: 0.98;
+  }
+
+  .testimonials__lead {
+    max-width: 34ch;
+    margin-inline: auto;
+    font-size: 0.97rem;
+    line-height: 1.58;
+  }
+
   .testimonial-carousel__header,
   .testimonial-carousel__footer {
     flex-direction: column;
@@ -1990,6 +2038,24 @@ strong {
   color: var(--gold);
 }
 
+.footer__contact-link {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 0.35rem;
+  max-width: 100%;
+}
+
+.footer__contact-label,
+.footer__contact-value--phone {
+  white-space: nowrap;
+}
+
+.footer__contact-value--email {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
@@ -2041,6 +2107,16 @@ strong {
 
 .footer__legal a:hover {
   color: var(--gold);
+}
+
+@media (max-width: 479px) {
+  .footer__col--contact {
+    grid-column: 1 / -1;
+  }
+
+  .footer__contact-link {
+    display: flex;
+  }
 }
 
 /* ---------- WHATSAPP FLOAT ---------- */
