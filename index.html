@@ -1,1660 +1,834 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Atlas Cálculos Trabalhistas | Cálculos Judiciais para Advogados</title>
-<meta name="description" content="Liquidação de sentença, revisão, impugnação e atualização de créditos trabalhistas. Atendimento remoto para advogados e escritórios em todo o Brasil, com base operacional em São Paulo."/>
-<meta name="robots" content="index, follow"/>
-<link rel="canonical" href="https://atlascalculos.com.br"/>
-<meta name="theme-color" content="#0d0e0e"/>
-<meta name="format-detection" content="telephone=yes"/>
-
-<!-- Google Analytics 4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFZM28X8TN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PFZM28X8TN');
-</script>
-
-<!-- Favicon SVG inline -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 52 52'%3E%3Crect width='52' height='52' rx='8' fill='%230d0e0e'/%3E%3Cpolygon points='26,8 8,42 44,42' fill='none' stroke='%23c9a84c' stroke-width='2.5' stroke-linejoin='round'/%3E%3Cline x1='15' y1='30' x2='37' y2='30' stroke='%23c9a84c' stroke-width='2'/%3E%3Ccircle cx='26' cy='8' r='2.5' fill='%23c9a84c'/%3E%3C/svg%3E"/>
-
-<!-- Open Graph / WhatsApp / redes sociais -->
-<meta property="og:type" content="website"/>
-<meta property="og:site_name" content="Atlas Cálculos Trabalhistas"/>
-<meta property="og:title" content="Atlas Cálculos Trabalhistas | Cálculos Judiciais para Advogados"/>
-<meta property="og:description" content="Liquidação de sentença, revisão, impugnação e atualização de créditos trabalhistas. Atendimento remoto para advogados e escritórios em todo o Brasil."/>
-<meta property="og:url" content="https://atlascalculos.com.br"/>
-<meta property="og:image" content="https://atlascalculos.com.br/og-image.jpg"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta property="og:locale" content="pt_BR"/>
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Atlas Cálculos Trabalhistas"/>
-<meta name="twitter:description" content="Cálculos trabalhistas judiciais para advogados e escritórios. Base em São Paulo, atendimento remoto nacional."/>
-<meta name="twitter:image" content="https://atlascalculos.com.br/og-image.jpg"/>
-
-<!-- Structured Data para Google -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Atlas Cálculos Trabalhistas",
-  "url": "https://atlascalculos.com.br",
-  "description": "Cálculos trabalhistas judiciais para advogados e escritórios, com base operacional em São Paulo e atendimento técnico remoto para todo o Brasil.",
-  "telephone": "+55 11 92687-6472",
-  "email": "contato@atlascalculos.com.br",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "São Paulo",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Brasil"
-  },
-  "availableLanguage": "pt-BR",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Advogados e escritórios de advocacia"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+55 11 92687-6472",
-    "contactType": "customer service",
-    "availableLanguage": "Portuguese"
-  },
-  "serviceType": [
-    "Liquidação de sentença trabalhista",
-    "Revisão de cálculos trabalhistas",
-    "Impugnação de cálculos",
-    "Atualização de créditos trabalhistas",
-    "Cálculos trabalhistas judiciais"
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-  /* ── TOKENS ── */
-  :root {
-    --bg:      #0d0e0e;
-    --bg2:     #131415;
-    --bg3:     #181919;
-    --border:  rgba(255,255,255,0.07);
-    --border2: rgba(255,255,255,0.12);
-    --gold:    #c9a84c;
-    --gold2:   #e8c96e;
-    --text:    #e6e4de;
-    --muted:   #888480;
-    --faint:   #363330;
-    --serif:   'Cormorant Garamond', Georgia, serif;
-    --sans:    'DM Sans', sans-serif;
-    --max:     1160px;
-    --px:      clamp(24px, 5vw, 80px);
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; height: -webkit-fill-available; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 16px;
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: inherit; text-decoration: none; }
-
-  /* ── CONTAINER ── */
-  .wrap {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--px);
-  }
-
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    height: 76px;
-    background: rgba(13,14,14,0.93);
-    backdrop-filter: blur(14px);
-    border-bottom: 0.5px solid var(--border);
-  }
-  .nav-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--px);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-  .nav-links {
-    display: flex;
-    gap: 36px;
-    font-size: 13px;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-  }
-  .nav-links a { transition: color 0.18s; }
-  .nav-links a:hover { color: var(--text); }
-  .nav-phone {
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.04em;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: color 0.18s;
-  }
-  .nav-phone:hover { color: var(--text); }
-  .nav-phone-dot {
-    width: 5px; height: 5px;
-    border-radius: 50%;
-    background: var(--gold);
-    opacity: 0.7;
-    flex-shrink: 0;
-  }
-  .nav-right {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-  }
-  .nav-cta {
-    display: inline-block;
-    padding: 9px 22px;
-    border: 0.5px solid var(--gold);
-    color: var(--gold);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: background 0.18s, color 0.18s;
-  }
-  .nav-cta:hover { background: var(--gold); color: #0d0e0e; }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    min-height: 100svh;
-    min-height: -webkit-fill-available;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding-top: 76px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 55% 45% at 85% 25%, rgba(201,168,76,0.07) 0%, transparent 65%),
-      radial-gradient(ellipse 35% 55% at 8%  85%, rgba(201,168,76,0.04) 0%, transparent 55%);
-    pointer-events: none;
-  }
-  .hero::after {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: radial-gradient(circle, rgba(201,168,76,0.12) 1px, transparent 1px);
-    background-size: 28px 28px;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-  .hero-decor {
-    position: absolute;
-    top: 0; right: var(--px);
-    width: 0.5px; height: 100%;
-    background: linear-gradient(to bottom, transparent 5%, var(--border) 25%, var(--border) 75%, transparent 95%);
-  }
-  .hero-body {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--px) 52px;
-    width: 100%;
-  }
-  .hero-eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 500;
-    margin-bottom: 28px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-  }
-  .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 28px; height: 0.5px;
-    background: var(--gold);
-    opacity: 0.6;
-  }
-  .hero h1 {
-    font-family: var(--serif);
-    font-size: clamp(46px, 6.5vw, 88px);
-    font-weight: 500;
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    max-width: 780px;
-    margin-bottom: 32px;
-  }
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold2);
-  }
-  .hero-sub {
-    font-size: 16px;
-    color: var(--muted);
-    max-width: 500px;
-    margin-bottom: 48px;
-    line-height: 1.8;
-    font-weight: 300;
-  }
-  .hero-actions {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  /* ── BUTTONS ── */
-  .btn-primary {
-    display: inline-block;
-    background: var(--gold);
-    color: #0d0e0e;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 15px 36px;
-    border-radius: 2px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: background 0.18s, transform 0.15s;
-    border: none; cursor: pointer;
-  }
-  .btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
-  .btn-ghost {
-    display: inline-block;
-    background: transparent;
-    color: var(--muted);
-    font-size: 12px;
-    padding: 15px 28px;
-    border-radius: 2px;
-    border: 0.5px solid var(--faint);
-    letter-spacing: 0.06em;
-    transition: border-color 0.18s, color 0.18s;
-    cursor: pointer;
-  }
-  .btn-ghost:hover { border-color: var(--muted); color: var(--text); }
-
-  /* ── HERO STATS ── */
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-    border-top: 0.5px solid var(--border);
-    padding-top: 28px;
-  }
-  .stat {
-    padding-right: 32px;
-    border-right: 0.5px solid var(--border);
-    text-align: center;
-  }
-  .stat:first-child { padding-left: 0; }
-  .stat:last-child { border-right: none; padding-right: 0; }
-  .stat + .stat { padding-left: 32px; }
-  .stat-num {
-    font-family: var(--serif);
-    font-size: 38px;
-    font-weight: 500;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .stat-label {
-    font-size: 12px;
-    color: var(--muted);
-    letter-spacing: 0.03em;
-    line-height: 1.5;
-  }
-
-  /* ── SECTION BASE ── */
-  .section {
-    padding: 80px 0;
-  }
-  .section-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--px);
-  }
-  .section-alt {
-    background: var(--bg2);
-    background-image: radial-gradient(circle, rgba(201,168,76,0.09) 1px, transparent 1px);
-    background-size: 28px 28px;
-  }
-
-  .section-process {
-    background: var(--bg);
-    background-image:
-      linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
-    background-size: 44px 44px;
-  }
-
-  /* ── CREDIBILITY BAR ── */
-  .credibility-bar {
-    border-top: 0.5px solid var(--border);
-    border-bottom: 0.5px solid var(--border);
-    background: var(--bg2);
-    padding: 40px 0;
-  }
-  .credibility-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--px);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
-  }
-  .cred-item {
-    text-align: center;
-    padding: 0 32px;
-    border-right: 0.5px solid var(--border);
-  }
-  .cred-item:first-child { padding-left: 0; }
-  .cred-item:last-child { border-right: none; padding-right: 0; }
-  .cred-icon { margin-bottom: 16px; }
-  .cred-item h4 {
-    font-family: var(--serif);
-    font-size: 17px;
-    font-weight: 500;
-    color: var(--gold2);
-    font-style: italic;
-    margin-bottom: 8px;
-    line-height: 1.25;
-  }
-  .cred-item p {
-    font-size: 12.5px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
-  @media (max-width: 768px) {
-    .credibility-inner { grid-template-columns: repeat(2, 1fr); gap: 28px 0; }
-    .cred-item { padding: 0 20px; }
-    .cred-item:first-child { padding-left: 20px; }
-    .cred-item:nth-child(2) { border-right: none; }
-    .cred-item:nth-child(3) { border-right: 0.5px solid var(--border); }
-    .cred-item:nth-child(4) { border-right: none; }
-  }
-
-  .section-header {
-    margin-bottom: 48px;
-  }
-  .eyebrow {
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 500;
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .eyebrow::before {
-    content: '';
-    display: block;
-    width: 24px; height: 0.5px;
-    background: var(--gold);
-    opacity: 0.6;
-    flex-shrink: 0;
-  }
-  h2 {
-    font-family: var(--serif);
-    font-size: clamp(32px, 4vw, 54px);
-    font-weight: 500;
-    line-height: 1.1;
-    letter-spacing: -0.015em;
-    margin-bottom: 18px;
-  }
-  .lead {
-    font-size: 16px;
-    color: var(--muted);
-    max-width: 520px;
-    line-height: 1.8;
-    font-weight: 300;
-  }
-
-  /* ── SERVICES ── */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border: 0.5px solid var(--border2);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-  .service-card {
-    background: var(--bg2);
-    padding: 44px 32px 40px;
-    transition: background 0.2s;
-    display: flex;
-    flex-direction: column;
-    border-right: 0.5px solid var(--border);
-  }
-  .service-card:last-child { border-right: none; }
-  .service-card:hover { background: var(--bg3); }
-  .svc-num {
-    opacity: 0.5;
-    margin-bottom: 28px;
-    line-height: 1;
-  }
-  .service-card h3 {
-    font-family: var(--serif);
-    font-size: 21px;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 14px;
-    flex-shrink: 0;
-  }
-  .service-card p {
-    font-size: 13.5px;
-    color: var(--muted);
-    line-height: 1.75;
-    flex: 1;
-  }
-  .svc-tag {
-    display: inline-block;
-    margin-top: 28px;
-    font-size: 10px;
-    color: var(--gold);
-    opacity: 0.65;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    flex-shrink: 0;
-  }
-
-  /* ── TRUST ── */
-  .trust-layout {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .trust-sticky {
-    position: sticky;
-    top: 100px;
-  }
-  .trust-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 36px 48px;
-  }
-  .trust-item {}
-  .trust-bar {
-    width: 28px; height: 0.5px;
-    background: var(--gold);
-    opacity: 0.7;
-    margin-bottom: 18px;
-  }
-  .trust-item h4 {
-    font-family: var(--serif);
-    font-size: 20px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    line-height: 1.2;
-  }
-  .trust-item p {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-
-  /* ── PROCESS ── */
-  .process-steps {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  .step {
-    position: relative;
-    padding: 40px 32px 36px;
-    border: 0.5px solid var(--border2);
-    border-radius: 6px;
-    background: var(--bg);
-    overflow: hidden;
-  }
-  .step::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(to right, var(--gold), transparent);
-    opacity: 0.4;
-  }
-  .step-bg-num {
-    font-family: var(--serif);
-    font-size: 80px;
-    font-weight: 600;
-    color: var(--gold);
-    opacity: 0.06;
-    line-height: 1;
-    position: absolute;
-    bottom: 16px; right: 20px;
-    user-select: none;
-  }
-  .step-label {
-    font-size: 10px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--gold);
-    opacity: 0.7;
-    margin-bottom: 20px;
-  }
-  .step h4 {
-    font-family: var(--serif);
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 12px;
-    line-height: 1.2;
-  }
-  .step p {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.75;
-    position: relative;
-  }
-
-  /* ── FAQ ── */
-  .faq-wrap {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 80px;
-    align-items: start;
-  }
-  .faq-sticky {
-    position: sticky;
-    top: 100px;
-  }
-  .faq-list { }
-  .faq-item {
-    border-top: 0.5px solid var(--border);
-    padding: 22px 0;
-    cursor: pointer;
-  }
-  .faq-item:last-child { border-bottom: 0.5px solid var(--border); }
-  .faq-q {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.3;
-    user-select: none;
-  }
-  .faq-icon {
-    color: var(--gold);
-    font-size: 18px;
-    line-height: 1.3;
-    flex-shrink: 0;
-    transition: transform 0.25s;
-    margin-top: 1px;
-  }
-  .faq-a {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.8;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, margin-top 0.25s;
-  }
-  .faq-item.open .faq-a { max-height: 320px; margin-top: 14px; }
-  .faq-item.open .faq-icon { transform: rotate(45deg); }
-
-  /* ── CONTACT ── */
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 72px;
-    align-items: start;
-  }
-  .contact-desc {
-    font-size: 15px;
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 40px;
-    font-weight: 300;
-  }
-  .channels { display: flex; flex-direction: column; gap: 12px; }
-  .channel {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 18px 22px;
-    border: 0.5px solid var(--border);
-    border-radius: 6px;
-    background: var(--bg);
-    transition: border-color 0.2s, background 0.2s;
-  }
-  .channel:hover { border-color: rgba(201,168,76,0.4); background: var(--bg3); }
-  .channel-ico { font-size: 18px; opacity: 0.8; flex-shrink: 0; }
-  .channel-lbl { font-size: 10px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 4px; }
-  .channel-val { font-size: 15px; font-weight: 500; }
-  .form-group { margin-bottom: 18px; }
-  .form-group label {
-    display: block;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    width: 100%;
-    background: var(--bg);
-    border: 0.5px solid var(--border2);
-    border-radius: 3px;
-    padding: 13px 16px;
-    color: var(--text);
-    font-family: var(--sans);
-    font-size: 14px;
-    outline: none;
-    transition: border-color 0.18s;
-    appearance: none;
-    -webkit-appearance: none;
-  }
-  .form-group input::placeholder,
-  .form-group textarea::placeholder { color: var(--faint); }
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus { border-color: rgba(201,168,76,0.5); }
-  .form-group textarea { min-height: 110px; resize: vertical; line-height: 1.6; }
-  .form-note {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.65;
-    margin-bottom: 20px;
-    opacity: 0.75;
-  }
-  .btn-full { width: 100%; text-align: center; display: block; }
-
-  /* ── SOBRE ── */
-  .sobre-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-  }
-  .sobre-visual {
-    position: relative;
-  }
-  .sobre-box {
-    background: var(--bg3);
-    border: 0.5px solid var(--border2);
-    border-radius: 6px;
-    padding: 36px 32px;
-    position: relative;
-    overflow: hidden;
-  }
-  .sobre-valores {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    position: relative;
-  }
-  .sobre-box::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(to right, var(--gold), transparent 60%);
-    opacity: 0.5;
-  }
-  .sobre-box::after {
-    content: 'A';
-    font-family: var(--serif);
-    font-size: 200px;
-    font-weight: 600;
-    color: var(--gold);
-    opacity: 0.04;
-    position: absolute;
-    bottom: -40px; right: -10px;
-    line-height: 1;
-    user-select: none;
-    pointer-events: none;
-  }
-  .sobre-valor {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .sobre-valor-dot {
-    width: 4px; height: 4px;
-    border-radius: 50%;
-    background: var(--gold);
-    flex-shrink: 0;
-    margin-top: 9px;
-  }
-  .sobre-valor-text strong {
-    display: block;
-    font-family: var(--serif);
-    font-size: 17px;
-    font-weight: 500;
-    margin-bottom: 3px;
-  }
-  .sobre-valor-text p {
-    font-size: 13.5px;
-    color: var(--muted);
-    line-height: 1.7;
-  }
-  .sobre-pilares {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    margin-top: 28px;
-    border: 0.5px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .pilar {
-    background: var(--bg2);
-    padding: 20px;
-    text-align: center;
-  }
-  .pilar-num {
-    font-family: var(--serif);
-    font-size: 28px;
-    font-weight: 500;
-    color: var(--gold);
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .pilar-lbl {
-    font-size: 11px;
-    color: var(--muted);
-    letter-spacing: 0.04em;
-    line-height: 1.4;
-  }
-
-  /* ── HUMANIZED CTA BANNER ── */
-  .cta-banner {
-    border-top: 0.5px solid var(--border);
-    border-bottom: 0.5px solid var(--border);
-    padding: 52px 0;
-    background-color: var(--bg2);
-    background-image:
-      linear-gradient(30deg, rgba(201,168,76,0.05) 12%, transparent 12.5%, transparent 87%, rgba(201,168,76,0.05) 87.5%),
-      linear-gradient(150deg, rgba(201,168,76,0.05) 12%, transparent 12.5%, transparent 87%, rgba(201,168,76,0.05) 87.5%),
-      linear-gradient(30deg, rgba(201,168,76,0.05) 12%, transparent 12.5%, transparent 87%, rgba(201,168,76,0.05) 87.5%),
-      linear-gradient(150deg, rgba(201,168,76,0.05) 12%, transparent 12.5%, transparent 87%, rgba(201,168,76,0.05) 87.5%);
-    background-size: 40px 70px;
-    background-position: 0 0, 0 0, 20px 35px, 20px 35px;
-    text-align: center;
-  }
-  .cta-banner h3 {
-    font-family: var(--serif);
-    font-size: clamp(28px, 3.5vw, 48px);
-    font-weight: 500;
-    margin-bottom: 16px;
-    line-height: 1.15;
-  }
-  .cta-banner h3 em { font-style: italic; color: var(--gold2); }
-  .cta-banner p {
-    font-size: 15px;
-    color: var(--muted);
-    margin-bottom: 36px;
-    font-weight: 300;
-  }
-  .cta-banner-actions {
-    display: flex;
-    gap: 14px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  footer {
-    border-top: 0.5px solid var(--border);
-    padding: 28px 0;
-  }
-  .footer-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    padding: 0 var(--px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .footer-logo { font-family: var(--serif); font-size: 16px; font-weight: 600; }
-  .footer-logo span { color: var(--gold); }
-  .footer-meta { display: flex; gap: 32px; align-items: center; }
-  footer p, .footer-meta a { font-size: 12px; color: var(--muted); }
-
-  /* ── MOBILE ── */
-  @media (max-width: 1024px) {
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .service-card { border-bottom: 0.5px solid var(--border); }
-    .trust-layout { grid-template-columns: 1fr; gap: 48px; }
-    .trust-sticky { position: static; }
-    .faq-wrap { grid-template-columns: 1fr; gap: 48px; }
-    .faq-sticky { position: static; }
-    .sobre-layout { grid-template-columns: 1fr; gap: 52px; }
-  }
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .nav-phone { display: none; }
-    .nav-logo svg { width: 150px; height: 36px; }
-    .nav-cta { font-size: 9px; padding: 8px 14px; white-space: nowrap; }
-    .hero { justify-content: flex-start; padding-top: 120px; min-height: 100svh; min-height: -webkit-fill-available; }
-    .hero-body { padding-bottom: 32px; }
-    .hero h1 { font-size: clamp(36px, 8vw, 52px); }
-    .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 0; }
-    .stat { border-right: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 20px; }
-    .stat:first-child { padding-left: 20px; }
-    .stat:nth-child(2) { border-right: none; }
-    .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
-    .stat + .stat { padding-left: 20px; }
-    .stat-num { font-size: 30px; }
-    .services-grid { grid-template-columns: 1fr; }
-    .trust-grid { grid-template-columns: 1fr; gap: 36px; }
-    .process-steps { grid-template-columns: 1fr; }
-    .contact-grid { grid-template-columns: 1fr; gap: 52px; }
-    .footer-inner { flex-direction: column; text-align: center; }
-    .footer-meta { flex-direction: column; gap: 8px; }
-    .sobre-pilares { grid-template-columns: 1fr 1fr; }
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .hero-eyebrow { animation: fadeUp 0.55s 0.05s ease both; }
-  .hero h1      { animation: fadeUp 0.65s 0.15s ease both; }
-  .hero-sub     { animation: fadeUp 0.65s 0.25s ease both; }
-  .hero-actions { animation: fadeUp 0.65s 0.32s ease both; }
-  .hero-stats   { animation: fadeUp 0.65s 0.42s ease both; }
-
-  /* ── LGPD COOKIE BANNER ── */
-  .lgpd-banner {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 200;
-    background: var(--bg2);
-    border-top: 0.5px solid var(--border2);
-    padding: 20px var(--px);
-    display: none;
-    animation: fadeUp 0.4s ease both;
-  }
-  .lgpd-inner {
-    max-width: var(--max);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 24px;
-    flex-wrap: wrap;
-  }
-  .lgpd-text {
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.65;
-    flex: 1;
-    min-width: 280px;
-  }
-  .lgpd-text a {
-    color: var(--gold);
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-  .lgpd-actions {
-    display: flex;
-    gap: 10px;
-    flex-shrink: 0;
-  }
-  .lgpd-accept {
-    background: var(--gold);
-    color: #0d0e0e;
-    border: none;
-    padding: 10px 24px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    cursor: pointer;
-    font-family: var(--sans);
-    transition: background 0.18s;
-  }
-  .lgpd-accept:hover { background: var(--gold2); }
-  .lgpd-reject {
-    background: transparent;
-    color: var(--muted);
-    border: 0.5px solid var(--faint);
-    padding: 10px 20px;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    cursor: pointer;
-    font-family: var(--sans);
-    transition: border-color 0.18s, color 0.18s;
-  }
-  .lgpd-reject:hover { border-color: var(--muted); color: var(--text); }
-
-  /* ── PRIVACY MODAL ── */
-  .priv-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 300;
-    background: rgba(0,0,0,0.7);
-    backdrop-filter: blur(6px);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-  }
-  .priv-box {
-    background: var(--bg2);
-    border: 0.5px solid var(--border2);
-    border-radius: 6px;
-    max-width: 680px;
-    width: 100%;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 44px 40px;
-    position: relative;
-  }
-  .priv-box h2 {
-    font-size: clamp(24px, 3vw, 32px);
-    margin-bottom: 24px;
-  }
-  .priv-box h4 {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 500;
-    margin: 24px 0 8px;
-    color: var(--text);
-  }
-  .priv-box p {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.8;
-    margin-bottom: 8px;
-  }
-  .priv-close {
-    position: absolute;
-    top: 20px; right: 24px;
-    background: none;
-    border: none;
-    color: var(--muted);
-    font-size: 24px;
-    cursor: pointer;
-    transition: color 0.18s;
-    line-height: 1;
-  }
-  .priv-close:hover { color: var(--text); }
-  @media (max-width: 768px) {
-    .lgpd-inner { flex-direction: column; align-items: flex-start; }
-    .priv-box { padding: 32px 24px; }
-  }
-
-  /* ── FLOATING WHATSAPP BUTTON ── */
-  .wpp-float {
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    z-index: 150;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-    transition: transform 0.2s, box-shadow 0.2s;
-    cursor: pointer;
-  }
-  .wpp-float:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 24px rgba(37,211,102,0.35);
-  }
-  .wpp-float svg {
-    width: 32px;
-    height: 32px;
-    fill: #fff;
-  }
-  .wpp-float-pulse {
-    position: absolute;
-    inset: -4px;
-    border-radius: 50%;
-    border: 2px solid #25D366;
-    animation: wppPulse 2s ease-out infinite;
-    pointer-events: none;
-  }
-  @keyframes wppPulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    100% { transform: scale(1.35); opacity: 0; }
-  }
-  /* Ajuste quando o banner LGPD está visível */
-  @media (max-width: 768px) {
-    .wpp-float { bottom: 20px; right: 20px; width: 54px; height: 54px; }
-    .wpp-float svg { width: 28px; height: 28px; }
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Cálculos Trabalhistas | Liquidação, Impugnação e Revisão</title>
+  <meta name="description" content="Cálculos trabalhistas para advogados e escritórios com foco em liquidação de sentença, impugnação, revisão, cálculos iniciais e contingência. Atendimento remoto nacional.">
+  <meta property="og:title" content="Atlas Cálculos Trabalhistas | Liquidação, Impugnação e Revisão">
+  <meta property="og:description" content="Suporte técnico em cálculos trabalhistas para advogados e escritórios, com páginas específicas para liquidação, impugnação, revisão, inicial e contingência.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://atlascalculos.com.br/">
+  <meta property="og:site_name" content="Atlas Cálculos Trabalhistas">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://atlascalculos.com.br/og-image.jpg">
+  <meta property="og:image:alt" content="Identidade visual da Atlas Cálculos Trabalhistas">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atlas Cálculos Trabalhistas | Liquidação, Impugnação e Revisão">
+  <meta name="twitter:description" content="Suporte técnico em cálculos trabalhistas para advogados e escritórios com atendimento remoto nacional.">
+  <meta name="twitter:image" content="https://atlascalculos.com.br/og-image.jpg">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://atlascalculos.com.br/">
+  <meta name="theme-color" content="#0a0a0b">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/icon-192.png">
+  <link rel="apple-touch-icon" href="/icon-192.png">
+  <link rel="preload" as="image" href="/images/hero/hero-banner-1440.jpg" imagesrcset="/images/hero/hero-banner-768.jpg 768w, /images/hero/hero-banner-1440.jpg 1440w" imagesizes="100vw">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://atlascalculos.com.br/#organization",
+        "name": "Atlas Cálculos Trabalhistas",
+        "url": "https://atlascalculos.com.br/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://atlascalculos.com.br/icon-192.png"
+        },
+        "image": "https://atlascalculos.com.br/og-image.jpg",
+        "email": "contato@atlascalculos.com.br",
+        "telephone": "+55 11 92687-6472",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://instagram.com/atlascalculos",
+          "https://linkedin.com/company/112794314"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://atlascalculos.com.br/#service",
+        "name": "Atlas Cálculos Trabalhistas",
+        "description": "Suporte técnico em cálculos trabalhistas para advogados e escritórios, com foco em liquidação de sentença, impugnação, revisão, cálculos iniciais e contingência.",
+        "url": "https://atlascalculos.com.br/",
+        "provider": {
+          "@id": "https://atlascalculos.com.br/#organization"
+        },
+        "areaServed": "BR",
+        "serviceType": [
+          "Cálculos iniciais trabalhistas",
+          "Liquidação de sentença trabalhista",
+          "Impugnação de cálculos trabalhistas",
+          "Contingência trabalhista",
+          "Revisão de cálculos trabalhistas"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://atlascalculos.com.br/#website",
+        "url": "https://atlascalculos.com.br/",
+        "name": "Atlas Cálculos Trabalhistas",
+        "inLanguage": "pt-BR"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://atlascalculos.com.br/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como funciona a solicitação de um cálculo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "O advogado envia o caso, o objetivo da demanda, o prazo e os documentos disponíveis. A Atlas faz a triagem técnica, define escopo e indica a frente mais adequada para o trabalho."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Atendem apenas advogados e escritórios?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. O atendimento da Atlas é direcionado a advogados autônomos e escritórios que precisam de apoio técnico em cálculos trabalhistas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Fazem revisão de cálculos já elaborados?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. A Atlas revisa cálculos já produzidos para validar critérios, memória e coerência técnica antes de protocolar, negociar ou impugnar."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Atendem demandas urgentes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sim. Demandas com prazo processual recebem prioridade na triagem para avaliar viabilidade, escopo e melhor formato de entrega."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
-<body>
+<body data-whatsapp-url="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica.">
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="#inicio" class="nav-logo">
-      <svg width="190" height="44" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="26,6 6,44 46,44" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linejoin="round"/>
-        <line x1="14" y1="31" x2="38" y2="31" stroke="#c9a84c" stroke-width="2.2"/>
-        <circle cx="26" cy="6" r="2.6" fill="#c9a84c"/>
-        <line x1="2" y1="47" x2="50" y2="47" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
-        <line x1="10" y1="44" x2="42" y2="44" stroke="#c9a84c" stroke-width="1.6"/>
-        <text x="62" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#c9a84c" letter-spacing="3">Atlas</text>
-        <text x="130" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#e6e4de" letter-spacing="1">Cálculos</text>
-        <text x="63" y="43" font-family="'DM Sans', sans-serif" font-size="9.5" font-weight="500" fill="#888480" letter-spacing="4">TRABALHISTAS</text>
-      </svg>
-    </a>
-    <div class="nav-links">
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#faq">FAQ</a>
-      <a href="#contato">Contato</a>
-    </div>
-    <div class="nav-right">
-      <a href="tel:+5511926876472" class="nav-phone">
-        <span class="nav-phone-dot"></span>
-        (11) 92687-6472
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo" aria-label="Atlas Cálculos Trabalhistas - Início">
+        <svg width="190" height="44" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="26,6 6,44 46,44" fill="none" stroke="#c9a84c" stroke-width="2.2" stroke-linejoin="round"/>
+          <line x1="14" y1="31" x2="38" y2="31" stroke="#c9a84c" stroke-width="2.2"/>
+          <circle cx="26" cy="6" r="2.6" fill="#c9a84c"/>
+          <line x1="2" y1="47" x2="50" y2="47" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+          <line x1="10" y1="44" x2="42" y2="44" stroke="#c9a84c" stroke-width="1.6"/>
+          <text x="62" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#c9a84c" letter-spacing="3">Atlas</text>
+          <text x="130" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#e6e4de" letter-spacing="1">Cálculos</text>
+          <text x="63" y="43" font-family="'DM Sans', 'Inter', sans-serif" font-size="9.5" font-weight="500" fill="#888480" letter-spacing="4">TRABALHISTAS</text>
+        </svg>
       </a>
-      <a href="https://wa.me/5511926876472" class="nav-cta" target="_blank" data-whatsapp-label="menu_solicitar_analise">Solicitar análise</a>
-    </div>
-  </div>
-</nav>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-decor"></div>
-  <div class="hero-body">
-    <p class="hero-eyebrow">Cálculos Trabalhistas Judiciais</p>
-    <h1>Precisão técnica na<br/><em>fase de cálculo</em><br/>para advogados.</h1>
-    <p class="hero-sub">Liquidação de sentença, revisão, impugnação e atualização de créditos. Atendimento remoto para advogados e escritórios em todo o Brasil, com base operacional em São Paulo.</p>
-    <div class="hero-actions">
-      <a href="https://wa.me/5511926876472" class="btn-primary" target="_blank" data-whatsapp-label="hero_falar_whatsapp">Falar pelo WhatsApp</a>
-      <a href="#servicos" class="btn-ghost">Ver serviços</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">Foco em cálculos trabalhistas</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">SP</div>
-        <div class="stat-label">Base + atendimento nacional remoto</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">48h</div>
-        <div class="stat-label">Prazo médio em demandas padrão</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">Urgente</div>
-        <div class="stat-label">Prioridade máxima para prazos</div>
-      </div>
-    </div>
-  </div>
-</section>
+      <nav class="header__nav" id="nav" aria-label="Navegação principal">
+        <ul class="nav__list">
+          <li><a href="#servicos" class="nav__link">Serviços</a></li>
+          <li><a href="#sobre" class="nav__link">Sobre</a></li>
+          <li><a href="#como-funciona" class="nav__link">Como funciona</a></li>
+          <li><a href="#faq" class="nav__link">FAQ</a></li>
+          <li><a href="#contato" class="nav__link">Contato</a></li>
+        </ul>
+      </nav>
 
-<!-- FAIXA DE CREDIBILIDADE -->
-<div class="credibility-bar">
-  <div class="credibility-inner">
-    <div class="cred-item">
-      <div class="cred-icon">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="4" y="6" width="24" height="20" rx="2"/>
-          <line x1="4" y1="12" x2="28" y2="12"/>
-          <line x1="12" y1="12" x2="12" y2="26"/>
-          <circle cx="20" cy="19" r="3"/>
-          <path d="M18.5 20.5L17 22"/>
-        </svg>
+      <div class="header__actions">
+        <a href="tel:+5511926876472" class="header__phone" aria-label="Ligar para Atlas">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>(11) 92687-6472</span>
+        </a>
+        <a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica." class="btn btn--primary btn--sm header__cta" target="_blank" rel="noopener noreferrer">
+          Solicitar Análise
+        </a>
+        <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <h4>Especialistas em PJe-Calc</h4>
-      <p>Sistema oficial da Justiça do Trabalho</p>
     </div>
-    <div class="cred-item">
-      <div class="cred-icon">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="16" cy="16" r="11"/>
-          <polyline points="16,9 16,16 21,19"/>
-          <path d="M25 25l3 3"/>
-        </svg>
-      </div>
-      <h4>Prazo de 48h</h4>
-      <p>Rapidez para atender prazos fatais</p>
-    </div>
-    <div class="cred-item">
-      <div class="cred-icon">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 4h14l6 6v18a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2z"/>
-          <polyline points="20,4 20,10 26,10"/>
-          <line x1="10" y1="16" x2="22" y2="16"/>
-          <line x1="10" y1="20" x2="22" y2="20"/>
-          <line x1="10" y1="24" x2="16" y2="24"/>
-        </svg>
-      </div>
-      <h4>Suporte em impugnações</h4>
-      <p>Memória organizada para sustentar a impugnação</p>
-    </div>
-    <div class="cred-item">
-      <div class="cred-icon">
-        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#c9a84c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M16 4L6 9v6c0 7 4.3 13.5 10 15 5.7-1.5 10-8 10-15V9L16 4z"/>
-          <polyline points="11,17 14.5,20.5 21,13"/>
-        </svg>
-      </div>
-      <h4>Critérios conforme o processo</h4>
-      <p>Atualização de acordo com os critérios adotados pelo juiz</p>
-    </div>
-  </div>
-</div>
+  </header>
 
-<!-- SERVIÇOS -->
-<div class="section" id="servicos">
-  <div class="section-inner">
-    <div class="section-header">
-      <p class="eyebrow">Serviços</p>
-      <h2>O que encaminhar<br/>para a Atlas</h2>
-      <p class="lead">Demandas completas ou pontuais, com enquadramento técnico e escopo definido antes do início.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="svc-num">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/></svg>
-        </div>
-        <h3>Cálculos Iniciais</h3>
-        <p>Apuração para petição inicial — horas extras, reflexos, verbas rescisórias, FGTS e demais rubricas da demanda.</p>
-        <span class="svc-tag">Petição Inicial</span>
+  <main>
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__image" src="/images/hero/hero-banner-1440.jpg" srcset="/images/hero/hero-banner-768.jpg 768w, images/hero/hero-banner-1440.jpg 1440w" sizes="100vw" width="1440" height="810" alt="" loading="eager" decoding="async" fetchpriority="high">
       </div>
-      <div class="service-card">
-        <div class="svc-num">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+      <div class="hero__bg-pattern" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__label">Suporte técnico em cálculos trabalhistas para advogados</p>
+          <h1 class="hero__title">Cálculos trabalhistas com <em>precisão técnica</em> para advogados e escritórios</h1>
+          <p class="hero__description">A Atlas atende demandas da petição inicial à execução com páginas específicas para liquidação, impugnação, revisão, contingência e apoio recorrente ao escritório.</p>
+          <div class="hero__actions">
+            <a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica." class="btn btn--primary" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Falar pelo WhatsApp
+            </a>
+            <a href="#servicos" class="btn btn--outline">Conhecer serviços</a>
+          </div>
         </div>
-        <h3>Liquidação de sentença</h3>
-        <p>Cálculos completos alinhados às verbas deferidas, reflexos, encargos e memória organizada para uso processual.</p>
-        <span class="svc-tag">Liquidação · Execução</span>
-      </div>
-      <div class="service-card">
-        <div class="svc-num">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-        </div>
-        <h3>Impugnação de Cálculos</h3>
-        <p>Análise dos cálculos da parte contrária com verificação de critérios, memória e inconsistências relevantes.</p>
-        <span class="svc-tag">Revisão · Impugnação</span>
-      </div>
-      <div class="service-card">
-        <div class="svc-num">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v5c0 5.5 3.4 10.7 8 12 4.6-1.3 8-6.5 8-12V7l-8-5z"/><polyline points="9,12 11,14 15,10"/></svg>
-        </div>
-        <h3>Contingenciamento</h3>
-        <p>Estimativa do passivo trabalhista para negociação, acordo ou provisão contábil com base nos critérios aplicáveis.</p>
-        <span class="svc-tag">Negociação · Acordo</span>
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- SOBRE A ATLAS -->
-<div class="section section-alt" id="sobre">
-  <div class="section-inner">
-    <div class="sobre-layout">
-      <div>
-        <p class="eyebrow">Sobre a Atlas</p>
-        <h2>Especialistas em cálculos trabalhistas judiciais</h2>
-        <p class="lead" style="margin-top:16px">A Atlas Cálculos foi fundada com o propósito de oferecer suporte técnico especializado à fase de cálculo — uma etapa crítica para o desfecho financeiro de cada processo trabalhista.</p>
-        <p style="font-size:14px; color:var(--muted); margin-top:20px; line-height:1.8">Nossa atuação é focada e deliberada: cálculos trabalhistas judiciais, com profundidade técnica, memória organizada e atendimento estruturado para a rotina de advogados e escritórios. Não fazemos de tudo — fazemos isso com rigor.</p>
-        <p style="font-size:14px; color:var(--muted); margin-top:16px; line-height:1.8">Com base operacional em São Paulo e atendimento remoto para todo o Brasil, a Atlas atende advogados autônomos e escritórios de pequeno e médio porte que precisam de uma frente técnica confiável, ágil e discreta.</p>
-        <div style="margin-top:36px">
-          <a href="https://wa.me/5511926876472" class="btn-primary" target="_blank" data-whatsapp-label="sobre_enviar_caso">Enviar o caso agora</a>
+        <div class="hero__stats">
+          <div class="stat" data-animate>
+            <span class="stat__value">100%</span>
+            <span class="stat__label">Foco em cálculos trabalhistas</span>
+          </div>
+          <div class="stat" data-animate>
+            <span class="stat__value">SP</span>
+            <span class="stat__label">Base em São Paulo, atendimento nacional</span>
+          </div>
+          <div class="stat" data-animate>
+            <span class="stat__value">48h</span>
+            <span class="stat__label">Prazo médio em demandas padrão</span>
+          </div>
+          <div class="stat" data-animate>
+            <span class="stat__value">Execução</span>
+            <span class="stat__label">Atuação da inicial à fase de cálculo</span>
+          </div>
         </div>
       </div>
-      <div class="sobre-visual">
-        <div class="sobre-box">
-          <div style="margin-bottom: 28px; opacity: 0.55;">
-            <svg width="34" height="34" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="26,5 5,45 47,45" fill="none" stroke="#c9a84c" stroke-width="2" stroke-linejoin="round"/>
-              <line x1="14" y1="32" x2="38" y2="32" stroke="#c9a84c" stroke-width="2"/>
-              <circle cx="26" cy="5" r="2.8" fill="#c9a84c"/>
-              <line x1="10" y1="45" x2="42" y2="45" stroke="#c9a84c" stroke-width="1.5"/>
+    </section>
+
+    <!-- ========== TRUST BAR ========== -->
+    <section class="trust" aria-label="Indicadores de confiança">
+      <div class="container">
+        <div class="trust__grid">
+          <div class="trust__item" data-animate>
+            <div class="trust__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <div class="trust__text">
+              <strong>Especialização em PJe-Calc</strong>
+              <span>Uso técnico compatível com a rotina da Justiça do Trabalho</span>
+            </div>
+          </div>
+          <div class="trust__item" data-animate>
+            <div class="trust__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="trust__text">
+              <strong>Agilidade em prazo sensível</strong>
+              <span>Triagem rápida para manifestações e urgências</span>
+            </div>
+          </div>
+          <div class="trust__item" data-animate>
+            <div class="trust__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="trust__text">
+              <strong>Memória organizada</strong>
+              <span>Material pensado para revisão jurídica e uso processual</span>
+            </div>
+          </div>
+          <div class="trust__item" data-animate>
+            <div class="trust__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <div class="trust__text">
+              <strong>Escopo claro por serviço</strong>
+              <span>Cada frente de cálculo ganhou URL própria e CTA direto</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICOS ========== -->
+    <section class="services" id="servicos">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-header__label">Serviços</span>
+          <h2 class="section-header__title">Frentes de cálculo organizadas por etapa do processo</h2>
+          <p class="section-header__lead">A home apresenta a Atlas e distribui a navegação. Cada serviço abaixo leva para uma página própria, com conteúdo específico, FAQ e CTA dedicado.</p>
+        </div>
+
+        <div class="services__grid">
+          <article class="service-card" data-animate>
+            <a href="/calculos-iniciais/" class="service-card__link" aria-label="Abrir página de cálculos iniciais trabalhistas">
+              <div class="service-card__media" aria-hidden="true">
+                <img src="/images/services/service-1-640.jpg" srcset="/images/services/service-1-640.jpg 640w, images/services/service-1-960.jpg 960w" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 48px)" alt="Mãos usando calculadora sobre pasta e notebook em mesa de trabalho" width="640" height="427" loading="lazy" decoding="async" fetchpriority="low">
+              </div>
+              <div class="service-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/></svg>
+              </div>
+              <span class="service-card__tag">Petição inicial</span>
+              <h3 class="service-card__title">Cálculos iniciais trabalhistas</h3>
+              <p class="service-card__description">Apuração de verbas, reflexos e estimativas para ajudar a estruturar pedidos, valor da causa e estratégia já no começo da demanda.</p>
+              <span class="service-card__link-text">Ver página do serviço <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <a href="/liquidacao-de-sentenca/" class="service-card__link" aria-label="Abrir página de liquidação de sentença trabalhista">
+              <div class="service-card__media" aria-hidden="true">
+                <img src="/images/services/service-2-640.jpg" srcset="/images/services/service-2-640.jpg 640w, images/services/service-2-960.jpg 960w" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 48px)" alt="Calculadora sobre relatórios em mesa de trabalho com notebook ao fundo" width="640" height="427" loading="lazy" decoding="async" fetchpriority="low">
+              </div>
+              <div class="service-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <span class="service-card__tag">Execução</span>
+              <h3 class="service-card__title">Liquidação de sentença</h3>
+              <p class="service-card__description">Conta alinhada ao título executivo, com memória clara e estrutura pensada para protocolo, revisão interna e desdobramentos da execução.</p>
+              <span class="service-card__link-text">Ver página do serviço <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <a href="/impugnacao-de-calculos/" class="service-card__link" aria-label="Abrir página de impugnação de cálculos trabalhistas">
+              <div class="service-card__media" aria-hidden="true">
+                <img src="/images/services/service-3-640.jpg" srcset="/images/services/service-3-640.jpg 640w, images/services/service-3-960.jpg 960w" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 48px)" alt="Mãos revisando documento com calculadora e caneta em mesa de trabalho" width="640" height="427" loading="lazy" decoding="async" fetchpriority="low">
+              </div>
+              <div class="service-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </div>
+              <span class="service-card__tag">Confronto técnico</span>
+              <h3 class="service-card__title">Impugnação de cálculos</h3>
+              <p class="service-card__description">Leitura crítica da conta apresentada para localizar excessos, inconsistências, premissas equivocadas e pontos que merecem manifestação específica.</p>
+              <span class="service-card__link-text">Ver página do serviço <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <a href="/calculos-de-contingencia/" class="service-card__link" aria-label="Abrir página de contingência trabalhista">
+              <div class="service-card__media" aria-hidden="true">
+                <img src="/images/services/service-4-640.jpg" srcset="/images/services/service-4-640.jpg 640w, images/services/service-4-960.jpg 960w" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 48px)" alt="Profissional analisando gráficos e relatórios em mesa de escritório" width="640" height="338" loading="lazy" decoding="async" fetchpriority="low">
+              </div>
+              <div class="service-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+              </div>
+              <span class="service-card__tag">Risco e acordo</span>
+              <h3 class="service-card__title">Contingência trabalhista</h3>
+              <p class="service-card__description">Estimativa técnica de passivo para apoiar provisões, negociação, definição de estratégia e leitura econômica de risco processual.</p>
+              <span class="service-card__link-text">Ver página do serviço <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <a href="/revisao-de-calculos/" class="service-card__link" aria-label="Abrir página de revisão de cálculos trabalhistas">
+              <div class="service-card__media" aria-hidden="true">
+                <img src="/images/services/service-5-640.jpg" srcset="/images/services/service-5-640.jpg 640w, images/services/service-5-960.jpg 960w" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 48px)" alt="Cálculo manual com calculadora e caneta sobre folha em branco" width="640" height="360" loading="lazy" decoding="async" fetchpriority="low">
+              </div>
+              <div class="service-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
+              </div>
+              <span class="service-card__tag">Validação prévia</span>
+              <h3 class="service-card__title">Revisão de cálculos</h3>
+              <p class="service-card__description">Segundo olhar técnico para contas já prontas, antes de protocolar, negociar ou assumir o valor como referência definitiva.</p>
+              <span class="service-card__link-text">Ver página do serviço <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+          </article>
+
+          <article class="service-card" data-animate>
+            <a href="/calculos-para-advogados/" class="service-card__link" aria-label="Abrir página de cálculos trabalhistas para advogados">
+              <div class="service-card__media" aria-hidden="true">
+                <img src="/images/services/service-6-640.jpg" srcset="/images/services/service-6-640.jpg 640w, images/services/service-6-960.jpg 960w" sizes="(min-width: 1024px) 31vw, (min-width: 640px) 48vw, calc(100vw - 48px)" alt="Mesa de trabalho jurídica com notebook, documentos e estátua da justiça" width="640" height="427" loading="lazy" decoding="async" fetchpriority="low">
+              </div>
+              <div class="service-card__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <span class="service-card__tag">Parceria recorrente</span>
+              <h3 class="service-card__title">Cálculos para advogados</h3>
+              <p class="service-card__description">Apoio técnico contínuo para escritórios que precisam terceirizar ou reforçar a frente de cálculo sem ampliar estrutura fixa.</p>
+              <span class="service-card__link-text">Ver página do serviço <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </a>
+          </article>
+        </div>
+
+        <p class="services__note" data-animate>Atualização de créditos, saldo remanescente e outras apurações pontuais entram como desdobramento das frentes principais, especialmente em <a href="/liquidacao-de-sentenca/">liquidação de sentença</a>, <a href="/revisao-de-calculos/">revisão de cálculos</a> e <a href="/impugnacao-de-calculos/">impugnação de cálculos</a>.</p>
+      </div>
+    </section>
+
+    <!-- ========== DEPOIMENTOS ========== -->
+    <section class="testimonials" id="depoimentos" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="testimonials__grid">
+          <div class="testimonials__intro" data-animate>
+            <span class="section-header__label">Provas sociais</span>
+            <h2 class="testimonials__title" id="testimonials-title">Confiança percebida por quem vive a rotina trabalhista</h2>
+            <p class="testimonials__lead">Após a visão geral dos serviços, os depoimentos entram como reforço de credibilidade sem competir com a leitura técnica. A estrutura abaixo já está pronta para receber textos reais autorizados quando forem aprovados.</p>
+          </div>
+
+          <div class="testimonial-carousel" data-carousel data-autoplay="6800" data-animate aria-roledescription="carousel" aria-label="Depoimentos de clientes e parceiros">
+            <div class="testimonial-carousel__header">
+              <p class="testimonial-carousel__eyebrow">Depoimentos em destaque</p>
+              <div class="testimonial-carousel__controls" aria-label="Controles do carrossel">
+                <button type="button" class="testimonial-carousel__arrow" data-carousel-prev aria-label="Ver depoimento anterior">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button type="button" class="testimonial-carousel__arrow" data-carousel-next aria-label="Ver próximo depoimento">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="testimonial-carousel__viewport" id="testimonialsCarouselViewport">
+              <div class="testimonial-carousel__track" data-carousel-track>
+                <article class="testimonial-carousel__slide" data-carousel-slide aria-label="Depoimento 1 de 4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__quote" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.08 7.5H6.36A3.36 3.36 0 0 0 3 10.86v4.78A2.36 2.36 0 0 0 5.36 18h2.28A2.36 2.36 0 0 0 10 15.64v-5.78A2.36 2.36 0 0 0 7.64 7.5H7.4c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 0 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Zm10 0h-2.72A3.36 3.36 0 0 0 13 10.86v4.78A2.36 2.36 0 0 0 15.36 18h2.28A2.36 2.36 0 0 0 20 15.64v-5.78A2.36 2.36 0 0 0 17.64 7.5h-.24c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 1 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-card__body">
+                      <p>“Entrega rápida, memória de cálculo impecável. Passei a terceirizar toda a fase de liquidação com a Atlas — ganho tempo e segurança no processo.”</p>
+                    </blockquote>
+                    <footer class="testimonial-card__author">
+                      <strong class="testimonial-card__name">Thais Castro</strong>
+                      <span class="testimonial-card__role">Advogada trabalhista</span>
+                    </footer>
+                  </div>
+                </article>
+
+                <article class="testimonial-carousel__slide" data-carousel-slide aria-label="Depoimento 2 de 4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__quote" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.08 7.5H6.36A3.36 3.36 0 0 0 3 10.86v4.78A2.36 2.36 0 0 0 5.36 18h2.28A2.36 2.36 0 0 0 10 15.64v-5.78A2.36 2.36 0 0 0 7.64 7.5H7.4c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 0 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Zm10 0h-2.72A3.36 3.36 0 0 0 13 10.86v4.78A2.36 2.36 0 0 0 15.36 18h2.28A2.36 2.36 0 0 0 20 15.64v-5.78A2.36 2.36 0 0 0 17.64 7.5h-.24c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 1 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-card__body">
+                      <p>“Precisei de uma revisão urgente para impugnação e a Atlas entregou em menos de 24h. Critérios bem fundamentados, memória clara. Virou parceiro fixo do escritório.”</p>
+                    </blockquote>
+                    <footer class="testimonial-card__author">
+                      <strong class="testimonial-card__name">Agatha Maria</strong>
+                      <span class="testimonial-card__role">Advogada Trabalhista</span>
+                    </footer>
+                  </div>
+                </article>
+
+                <article class="testimonial-carousel__slide" data-carousel-slide aria-label="Depoimento 3 de 4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__quote" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.08 7.5H6.36A3.36 3.36 0 0 0 3 10.86v4.78A2.36 2.36 0 0 0 5.36 18h2.28A2.36 2.36 0 0 0 10 15.64v-5.78A2.36 2.36 0 0 0 7.64 7.5H7.4c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 0 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Zm10 0h-2.72A3.36 3.36 0 0 0 13 10.86v4.78A2.36 2.36 0 0 0 15.36 18h2.28A2.36 2.36 0 0 0 20 15.64v-5.78A2.36 2.36 0 0 0 17.64 7.5h-.24c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 1 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-card__body">
+                      <p>“Terceirizar os cálculos trabalhistas foi a melhor decisão operacional do escritório. A Atlas entende a rotina do advogado — escopo definido, prazo cumprido, zero retrabalho.”</p>
+                    </blockquote>
+                    <footer class="testimonial-card__author">
+                      <strong class="testimonial-card__name">Ana Claudia</strong>
+                      <span class="testimonial-card__role">Advogada Trabalhista</span>
+                    </footer>
+                  </div>
+                </article>
+
+                <article class="testimonial-carousel__slide" data-carousel-slide aria-label="Depoimento 4 de 4">
+                  <div class="testimonial-card">
+                    <div class="testimonial-card__quote" aria-hidden="true">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M9.08 7.5H6.36A3.36 3.36 0 0 0 3 10.86v4.78A2.36 2.36 0 0 0 5.36 18h2.28A2.36 2.36 0 0 0 10 15.64v-5.78A2.36 2.36 0 0 0 7.64 7.5H7.4c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 0 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Zm10 0h-2.72A3.36 3.36 0 0 0 13 10.86v4.78A2.36 2.36 0 0 0 15.36 18h2.28A2.36 2.36 0 0 0 20 15.64v-5.78A2.36 2.36 0 0 0 17.64 7.5h-.24c.32-1.3 1.4-2.3 2.78-2.54a.75.75 0 1 0-.26-1.48 5.36 5.36 0 0 0-4.84 4.02Z"/></svg>
+                    </div>
+                    <blockquote class="testimonial-card__body">
+                      <p>“Atendimento discreto, técnico e sem burocracia. Envio o caso pelo WhatsApp, recebo a triagem no mesmo dia e o cálculo chega com premissas documentadas. Exatamente o que eu precisava.”</p>
+                    </blockquote>
+                    <footer class="testimonial-card__author">
+                      <strong class="testimonial-card__name">Matheus Soares</strong>
+                      <span class="testimonial-card__role">Advogado Trabalhista</span>
+                    </footer>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="testimonial-carousel__footer">
+              <div class="testimonial-carousel__dots" data-carousel-dots aria-label="Paginação dos depoimentos"></div>
+              <p class="testimonial-carousel__count">
+                <span data-carousel-current>01</span>
+                <span aria-hidden="true">/</span>
+                <span data-carousel-total>04</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOBRE ========== -->
+    <section class="about" id="sobre">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__content" data-animate>
+            <span class="section-header__label">Sobre a Atlas</span>
+            <h2 class="about__title">Especialização técnica para a fase de cálculo trabalhista</h2>
+            <p class="about__text">A Atlas foi estruturada para atender uma dor específica do contencioso trabalhista: a distância entre a estratégia jurídica e a execução técnica dos números. Por isso, cada frente relevante do serviço ganhou uma página própria e uma proposta mais clara de contratação.</p>
+            <p class="about__text">O site continua visualmente sóbrio e institucional, mas agora distribui melhor a autoridade interna entre liquidação, impugnação, revisão, contingência e cálculos iniciais. <strong>Não fazemos de tudo &mdash; fazemos cálculo trabalhista com foco real.</strong></p>
+            <p class="about__text about__text--muted">Com base operacional em São Paulo e atendimento remoto para todo o Brasil, a Atlas atende advogados autônomos e escritórios que precisam de uma frente técnica confiável, ágil e discreta.</p>
+            <a href="/calculos-para-advogados/" class="btn btn--primary">Conhecer o modelo de apoio</a>
+          </div>
+
+          <div class="about__values" data-animate>
+            <div class="value-card">
+              <div class="value-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+              </div>
+              <div>
+                <h3 class="value-card__title">Especialização</h3>
+                <p class="value-card__text">Foco exclusivo em cálculos trabalhistas judiciais &mdash; sem dispersão em outras práticas.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div>
+                <h3 class="value-card__title">Rigor técnico</h3>
+                <p class="value-card__text">Premissas claras, memória bem estruturada e revisão criteriosa antes de cada entrega.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <div>
+                <h3 class="value-card__title">Agilidade</h3>
+                <p class="value-card__text">Prazos respeitados e prioridade real para demandas com urgência processual.</p>
+              </div>
+            </div>
+            <div class="value-card">
+              <div class="value-card__icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <div>
+                <h3 class="value-card__title">Confidencialidade</h3>
+                <p class="value-card__text">Informações e documentos tratados com sigilo e postura compatíveis com a rotina jurídica.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COMO FUNCIONA ========== -->
+    <section class="process" id="como-funciona">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-header__label">Como funciona</span>
+          <h2 class="section-header__title">Um processo claro do início à entrega</h2>
+          <p class="section-header__lead">Da solicitação à entrega, cada etapa é conduzida com enquadramento técnico e comunicação direta.</p>
+        </div>
+
+        <div class="process__grid">
+          <div class="process-step" data-animate>
+            <span class="process-step__number">01</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Envie o caso</h3>
+              <p class="process-step__text">Encaminhe o contexto da demanda, o objetivo técnico, o prazo e os documentos disponíveis por WhatsApp ou e-mail.</p>
+            </div>
+          </div>
+          <div class="process-step__connector" aria-hidden="true"></div>
+          <div class="process-step" data-animate>
+            <span class="process-step__number">02</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Triagem técnica</h3>
+              <p class="process-step__text">A demanda é analisada, enquadrada tecnicamente e classificada por urgência. Escopo e prazo definidos antes do início.</p>
+            </div>
+          </div>
+          <div class="process-step__connector" aria-hidden="true"></div>
+          <div class="process-step" data-animate>
+            <span class="process-step__number">03</span>
+            <div class="process-step__content">
+              <h3 class="process-step__title">Entrega com memória</h3>
+              <p class="process-step__text">Cálculo entregue com memória organizada, pronta para uso processual, revisão ou negociação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== POR QUE A ATLAS ========== -->
+    <section class="differentials" id="diferenciais">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <span class="section-header__label">Onde a Atlas entra</span>
+          <h2 class="section-header__title">Apoio técnico em momentos diferentes da rotina trabalhista</h2>
+          <p class="section-header__lead">As páginas internas organizam a navegação por intenção de busca e também espelham como o serviço aparece no dia a dia dos escritórios.</p>
+        </div>
+
+        <div class="differentials__grid">
+          <div class="diff-card" data-animate>
+            <div class="diff-card__number">01</div>
+            <h3 class="diff-card__title">Antes do protocolo</h3>
+            <p class="diff-card__text">A frente de <a href="/calculos-iniciais/">cálculos iniciais</a> ajuda a dimensionar pedidos e dar base econômica à petição inicial.</p>
+          </div>
+          <div class="diff-card" data-animate>
+            <div class="diff-card__number">02</div>
+            <h3 class="diff-card__title">Na fase de execução</h3>
+            <p class="diff-card__text">Quando o processo já pede conta pronta, a página de <a href="/liquidacao-de-sentenca/">liquidação de sentença</a> concentra a intenção mais transacional.</p>
+          </div>
+          <div class="diff-card" data-animate>
+            <div class="diff-card__number">03</div>
+            <h3 class="diff-card__title">Na validação do número</h3>
+            <p class="diff-card__text">Se a necessidade for conferir ou confrontar uma conta existente, as páginas de <a href="/revisao-de-calculos/">revisão</a> e <a href="/impugnacao-de-calculos/">impugnação</a> fazem esse papel.</p>
+          </div>
+          <div class="diff-card" data-animate>
+            <div class="diff-card__number">04</div>
+            <h3 class="diff-card__title">Na gestão do passivo</h3>
+            <p class="diff-card__text">Para risco, acordo e previsibilidade financeira, a frente de <a href="/calculos-de-contingencia/">contingência trabalhista</a> organiza cenários de exposição.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__sidebar" data-animate>
+            <span class="faq__label">Perguntas frequentes</span>
+            <h2 class="faq__heading">Dúvidas sobre o atendimento da Atlas</h2>
+            <p class="faq__lead">Respostas objetivas para entender como funciona a contratação e qual página de serviço faz mais sentido para o seu caso.</p>
+            <div class="faq__sidebar-cta">
+              <p>Quer ajuda para escolher a frente técnica correta?</p>
+              <a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20quero%20entender%20qual%20servi%C3%A7o%20da%20Atlas%20se%20encaixa%20melhor%20no%20meu%20caso." class="btn btn--primary" target="_blank" rel="noopener noreferrer">Falar agora</a>
+            </div>
+          </div>
+
+          <div class="faq__list" data-animate>
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>Como funciona a solicitação de um cálculo?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>Você encaminha as informações principais do caso, o objetivo da demanda, o prazo e os documentos disponíveis. A partir dessa triagem, é definido o escopo técnico e a frente mais adequada, como <a href="/calculos-iniciais/">cálculos iniciais</a>, <a href="/liquidacao-de-sentenca/">liquidação</a> ou <a href="/impugnacao-de-calculos/">impugnação</a>.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>Como envio os documentos?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>Os documentos podem ser enviados por WhatsApp ou e-mail, conforme o volume e a necessidade do caso. Na análise inicial, indicamos o formato mais adequado para o encaminhamento.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>O atendimento é apenas para advogados?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>Sim. O atendimento é remoto e direcionado a advogados autônomos e escritórios de todo o Brasil que precisam de suporte técnico especializado em cálculos trabalhistas.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>Atendem demandas urgentes?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>Sim. Demandas com prazo recebem prioridade máxima, sempre com análise prévia do escopo e da viabilidade técnica do atendimento.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>Qual é o prazo de entrega?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>O prazo varia conforme o volume de documentos e a complexidade do caso. Demandas padrão têm prazo médio de 48 horas. Urgências são priorizadas e o prazo é alinhado na triagem.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>Fazem revisão de cálculos já elaborados?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>Sim. É possível analisar cálculos já produzidos para <a href="/revisao-de-calculos/">revisão de critérios</a>, conferência de memória, <a href="/impugnacao-de-calculos/">impugnação</a> ou validação técnica do material.</p>
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__question">
+                <span>É possível contratar cálculo pontual?</span>
+                <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="faq__answer">
+                <p>Sim. O atendimento abrange tanto cálculos completos quanto apurações pontuais. Para escritórios com fluxo constante, a Atlas também estruturou uma página específica de <a href="/calculos-para-advogados/">apoio recorrente em cálculos trabalhistas para advogados</a>.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA BAND ========== -->
+    <section class="cta-band" aria-label="Chamada para ação">
+      <div class="container">
+        <div class="cta-band__inner" data-animate>
+          <h2 class="cta-band__title">Precisa de suporte técnico em cálculos trabalhistas?</h2>
+          <p class="cta-band__text">Envie o caso e receba o enquadramento técnico. Se a necessidade já estiver clara, escolha a página do serviço; se ainda estiver em dúvida, a Atlas ajuda a direcionar.</p>
+          <div class="cta-band__actions">
+            <a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica." class="btn btn--primary btn--lg" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Solicitar Análise pelo WhatsApp
+            </a>
+            <a href="/calculos-para-advogados/" class="btn btn--outline btn--lg">Ver apoio para escritórios</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTATO ========== -->
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="contact__grid">
+          <div class="contact__info" data-animate>
+            <span class="section-header__label">Contato</span>
+            <h2 class="contact__title">Envie o caso e receba o enquadramento técnico</h2>
+            <p class="contact__lead">Atendimento remoto para advogados e escritórios de todo o Brasil. Base operacional em São Paulo. Na home, a privacidade aparece só como aviso resumido e link para a página dedicada.</p>
+
+            <div class="contact__channels">
+              <a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica." class="contact-channel" target="_blank" rel="noopener noreferrer">
+                <div class="contact-channel__icon contact-channel__icon--whatsapp">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <span>(11) 92687-6472</span>
+                </div>
+              </a>
+              <a href="mailto:contato@atlascalculos.com.br" class="contact-channel">
+                <div class="contact-channel__icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <strong>E-mail</strong>
+                  <span>contato@atlascalculos.com.br</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact__form" id="contactForm" data-animate>
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome e escritório</label>
+              <input type="text" id="nome" name="nome" class="form-input" placeholder="Ex: Dr. Silva - Silva & Associados" required>
+            </div>
+            <div class="form-group">
+              <label for="tipo" class="form-label">Tipo de demanda</label>
+              <select id="tipo" name="tipo" class="form-input form-select" required>
+                <option value="" disabled selected>Selecione o tipo de serviço</option>
+                <option value="Cálculos iniciais trabalhistas">Cálculos iniciais trabalhistas</option>
+                <option value="Liquidação de sentença trabalhista">Liquidação de sentença trabalhista</option>
+                <option value="Impugnação de cálculos trabalhistas">Impugnação de cálculos trabalhistas</option>
+                <option value="Contingência trabalhista">Contingência trabalhista</option>
+                <option value="Revisão de cálculos trabalhistas">Revisão de cálculos trabalhistas</option>
+                <option value="Apoio recorrente em cálculos para advogados">Apoio recorrente em cálculos para advogados</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="descricao" class="form-label">Descreva o caso</label>
+              <textarea id="descricao" name="descricao" class="form-input form-textarea" rows="4" placeholder="Descreva brevemente o caso, objetivo, prazo e documentos disponíveis." required></textarea>
+            </div>
+            <p class="form-notice">As informações são tratadas com confidencialidade. A política completa está disponível em <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+            <button type="submit" class="btn btn--primary btn--full">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Enviar pelo WhatsApp
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="footer__logo" aria-label="Atlas Cálculos Trabalhistas">
+            <svg width="160" height="38" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="26,6 6,44 46,44" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linejoin="round"/>
+              <line x1="14" y1="31" x2="38" y2="31" stroke="#c9a84c" stroke-width="1.8"/>
+              <circle cx="26" cy="6" r="2.2" fill="#c9a84c"/>
+              <line x1="2" y1="47" x2="50" y2="47" stroke="#c9a84c" stroke-width="0.6" opacity="0.4"/>
+              <line x1="10" y1="44" x2="42" y2="44" stroke="#c9a84c" stroke-width="1.4"/>
+              <text x="62" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#c9a84c" letter-spacing="3">Atlas</text>
+              <text x="130" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="500" fill="#e6e4de" letter-spacing="1">Cálculos</text>
+              <text x="63" y="43" font-family="'DM Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#555250" letter-spacing="4">TRABALHISTAS</text>
             </svg>
-          </div>
-          <div class="sobre-valores">
-            <div class="sobre-valor">
-              <div class="sobre-valor-dot"></div>
-              <div class="sobre-valor-text">
-                <strong>Especialização</strong>
-                <p>Foco exclusivo em cálculos trabalhistas judiciais — sem dispersão em outras práticas.</p>
-              </div>
-            </div>
-            <div class="sobre-valor">
-              <div class="sobre-valor-dot"></div>
-              <div class="sobre-valor-text">
-                <strong>Rigor técnico</strong>
-                <p>Premissas claras, memória bem estruturada e revisão criteriosa antes de cada entrega.</p>
-              </div>
-            </div>
-            <div class="sobre-valor">
-              <div class="sobre-valor-dot"></div>
-              <div class="sobre-valor-text">
-                <strong>Agilidade</strong>
-                <p>Prazos respeitados e prioridade real para demandas com urgência processual.</p>
-              </div>
-            </div>
-            <div class="sobre-valor">
-              <div class="sobre-valor-dot"></div>
-              <div class="sobre-valor-text">
-                <strong>Confidencialidade</strong>
-                <p>Informações e documentos tratados com sigilo e postura compatíveis com a rotina jurídica.</p>
-              </div>
-            </div>
-          </div>
-          <div class="sobre-pilares">
-            <div class="pilar">
-              <div class="pilar-num">SP</div>
-              <div class="pilar-lbl">Base operacional<br/>São Paulo</div>
-            </div>
-            <div class="pilar">
-              <div class="pilar-num">BR</div>
-              <div class="pilar-lbl">Atendimento remoto<br/>todo o Brasil</div>
-            </div>
-            <div class="pilar" style="border-top: 0.5px solid var(--border);">
-              <div class="pilar-num">48h</div>
-              <div class="pilar-lbl">Prazo médio<br/>demanda padrão</div>
-            </div>
-            <div class="pilar" style="border-top: 0.5px solid var(--border);">
-              <div class="pilar-num">100%</div>
-              <div class="pilar-lbl">Foco em cálculos<br/>trabalhistas</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CTA HUMANIZADO -->
-<div class="cta-banner">
-  <div class="wrap">
-    <h3>Tem um caso para analisar?<br/><em>Vamos conversar.</em></h3>
-    <p>Envie as informações do caso e a equipe Atlas retorna com o enquadramento técnico inicial.</p>
-    <div class="cta-banner-actions">
-      <a href="https://wa.me/5511926876472" class="btn-primary" target="_blank" data-whatsapp-label="cta_banner_whatsapp">Falar pelo WhatsApp</a>
-      <a href="mailto:contato@atlascalculos.com.br" class="btn-ghost">Enviar por e-mail</a>
-    </div>
-  </div>
-</div>
-
-<!-- POR QUE A ATLAS -->
-<div class="section section-alt" id="confianca">
-  <div class="section-inner">
-    <div class="trust-layout">
-      <div class="trust-sticky">
-        <p class="eyebrow">Por que a Atlas</p>
-        <h2>Atendimento técnico para a rotina jurídica</h2>
-        <p class="lead" style="margin-top:16px">Especialização, clareza operacional e prioridade real para urgências.</p>
-      </div>
-      <div class="trust-grid">
-        <div class="trust-item">
-          <div class="trust-bar"></div>
-          <h4>Especialização exclusiva</h4>
-          <p>Atuação dedicada a cálculos trabalhistas judiciais — sem dispersão em outras frentes. Profundidade técnica onde importa.</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-bar"></div>
-          <h4>Memória bem estruturada</h4>
-          <p>Premissas organizadas e memória clara para sustentar revisão, negociação e peticionamento com mais segurança.</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-bar"></div>
-          <h4>Prioridade real para urgências</h4>
-          <p>Demandas com prazo em andamento recebem prioridade máxima, com análise de viabilidade e escopo definido rapidamente.</p>
-        </div>
-        <div class="trust-item">
-          <div class="trust-bar"></div>
-          <h4>Confidencialidade operacional</h4>
-          <p>Informações tratadas com discrição e organização compatíveis com a rotina jurídica. Do primeiro contato à entrega.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- COMO FUNCIONA -->
-<div class="section section-process" id="como-funciona">
-  <div class="section-inner">
-    <div class="section-header">
-      <p class="eyebrow">Fluxo de atendimento</p>
-      <h2>Um processo claro<br/>do início à entrega</h2>
-      <p class="lead">Três etapas objetivas para iniciar o atendimento sem ruído e com escopo definido.</p>
-    </div>
-    <div class="process-steps">
-      <div class="step">
-        <span class="step-bg-num">01</span>
-        <div class="step-label">Passo 01</div>
-        <h4>Envie o caso</h4>
-        <p>Encaminhe o contexto da demanda, o objetivo técnico, o prazo e os documentos disponíveis por WhatsApp ou e-mail.</p>
-      </div>
-      <div class="step">
-        <span class="step-bg-num">02</span>
-        <div class="step-label">Passo 02</div>
-        <h4>Triagem técnica</h4>
-        <p>A demanda é analisada, enquadrada tecnicamente e classificada por urgência. Escopo e prazo definidos antes do início.</p>
-      </div>
-      <div class="step">
-        <span class="step-bg-num">03</span>
-        <div class="step-label">Passo 03</div>
-        <h4>Entrega com memória</h4>
-        <p>Cálculo entregue com memória organizada, pronta para uso processual, revisão ou negociação.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ -->
-<div class="section section-alt" id="faq">
-  <div class="section-inner">
-    <div class="faq-wrap">
-      <div class="faq-sticky">
-        <p class="eyebrow">Perguntas</p>
-        <h2>Dúvidas sobre o atendimento</h2>
-        <p class="lead" style="margin-top:16px">Respostas objetivas para ajudar a entender como funciona a contratação.</p>
-        <div style="margin-top:36px">
-          <a href="https://wa.me/5511926876472" class="btn-primary" target="_blank" data-whatsapp-label="faq_falar_agora">Falar agora</a>
-        </div>
-      </div>
-      <div class="faq-list">
-        <div class="faq-item">
-          <div class="faq-q">Como funciona a solicitação de um cálculo? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Você encaminha as informações principais do caso, o objetivo da demanda, o prazo e os documentos disponíveis. A partir dessa triagem, é definido o escopo técnico e a melhor forma de condução do trabalho.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Como envio os documentos? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Os documentos podem ser enviados por WhatsApp ou e-mail, conforme o volume e a necessidade do caso. Na análise inicial, indicamos o formato mais adequado para o encaminhamento.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">O atendimento é apenas para advogados? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Sim. O atendimento é remoto e direcionado a advogados autônomos e escritórios de todo o Brasil que precisam de suporte técnico especializado em cálculos trabalhistas.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Atendem demandas urgentes? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Sim. Demandas com prazo recebem prioridade máxima, sempre com análise prévia do escopo e da viabilidade técnica do atendimento.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Qual é o prazo de entrega? <span class="faq-icon">+</span></div>
-          <div class="faq-a">O prazo varia conforme o volume de documentos e a complexidade do caso. Demandas padrão têm prazo médio de 48 horas. Urgências são priorizadas e o prazo é alinhado na triagem.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Fazem revisão de cálculos já elaborados? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Sim. É possível analisar cálculos já produzidos para revisão de critérios, conferência de memória, impugnação ou validação técnica do material.</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">É possível contratar cálculo pontual? <span class="faq-icon">+</span></div>
-          <div class="faq-a">Sim. O atendimento abrange tanto cálculos completos quanto apurações pontuais, sempre conforme a demanda apresentada.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- CONTATO -->
-<div class="section" id="contato">
-  <div class="section-inner">
-    <div class="contact-grid">
-      <div>
-        <p class="eyebrow">Contato</p>
-        <h2>Envie o caso e receba o enquadramento técnico</h2>
-        <p class="contact-desc" style="margin-top:16px">Atendimento remoto para advogados e escritórios de todo o Brasil. Base operacional em São Paulo. Prioridade para demandas com prazo em andamento.</p>
-        <div class="channels">
-          <a href="https://wa.me/5511926876472" class="channel" target="_blank" data-whatsapp-label="contato_canal_whatsapp">
-            <span class="channel-ico">💬</span>
-            <div>
-              <div class="channel-lbl">WhatsApp</div>
-              <div class="channel-val">+55 11 92687-6472</div>
-            </div>
           </a>
-          <a href="mailto:contato@atlascalculos.com.br" class="channel">
-            <span class="channel-ico">✉</span>
-            <div>
-              <div class="channel-lbl">E-mail</div>
-              <div class="channel-val">contato@atlascalculos.com.br</div>
-            </div>
+          <p class="footer__location">Base em São Paulo &middot; Atendimento nacional remoto</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Links do rodapé">
+          <div class="footer__col">
+            <p class="footer__heading">Navegação</p>
+            <ul>
+              <li><a href="#servicos">Serviços</a></li>
+              <li><a href="#sobre">Sobre</a></li>
+              <li><a href="#como-funciona">Como funciona</a></li>
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__heading">Serviços</p>
+            <ul>
+              <li><a href="/calculos-iniciais/">Cálculos iniciais</a></li>
+              <li><a href="/liquidacao-de-sentenca/">Liquidação de sentença</a></li>
+              <li><a href="/impugnacao-de-calculos/">Impugnação de cálculos</a></li>
+              <li><a href="/calculos-de-contingencia/">Contingência trabalhista</a></li>
+              <li><a href="/revisao-de-calculos/">Revisão de cálculos</a></li>
+              <li><a href="/calculos-para-advogados/">Cálculos para advogados</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__heading">Contato</p>
+            <ul>
+              <li><a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica." target="_blank" rel="noopener noreferrer">WhatsApp: (11) 92687-6472</a></li>
+              <li><a href="mailto:contato@atlascalculos.com.br">contato@atlascalculos.com.br</a></li>
+              <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__social">
+          <a href="https://instagram.com/atlascalculos" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Atlas Cálculos">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://linkedin.com/company/112794314" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn da Atlas Cálculos">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           </a>
         </div>
-      </div>
-      <div>
-        <div class="form-group">
-          <label>Nome e escritório</label>
-          <input type="text" id="f-nome" placeholder="Dr. João Silva — Escritório XYZ"/>
+        <div class="footer__legal">
+          <a href="/politica-de-privacidade/">Política de Privacidade</a>
+          <span>&copy; 2026 Atlas Cálculos Trabalhistas</span>
         </div>
-        <div class="form-group">
-          <label>Descreva o caso</label>
-          <textarea id="f-caso" placeholder="Tipo de cálculo, fase processual, prazo e qualquer detalhe relevante..." style="min-height:140px"></textarea>
-        </div>
-        <p class="form-note">As informações são tratadas com confidencialidade. Você será direcionado ao WhatsApp com os dados já preenchidos.</p>
-        <button onclick="enviarWhatsApp(this)" class="btn-primary btn-full" data-whatsapp-label="formulario_whatsapp">Enviar pelo WhatsApp</button>
       </div>
     </div>
-  </div>
-</div>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-inner">
-    <a href="#inicio" style="display:flex; align-items:center; text-decoration:none;">
-      <svg width="160" height="38" viewBox="0 0 260 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <polygon points="26,6 6,44 46,44" fill="none" stroke="#c9a84c" stroke-width="1.8" stroke-linejoin="round"/>
-        <line x1="14" y1="31" x2="38" y2="31" stroke="#c9a84c" stroke-width="1.8"/>
-        <circle cx="26" cy="6" r="2.2" fill="#c9a84c"/>
-        <line x1="2" y1="47" x2="50" y2="47" stroke="#c9a84c" stroke-width="0.6" opacity="0.4"/>
-        <line x1="10" y1="44" x2="42" y2="44" stroke="#c9a84c" stroke-width="1.4"/>
-        <text x="62" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="600" fill="#c9a84c" letter-spacing="3">Atlas</text>
-        <text x="130" y="28" font-family="'Cormorant Garamond', Georgia, serif" font-size="24" font-weight="500" fill="#e6e4de" letter-spacing="1">Cálculos</text>
-        <text x="63" y="43" font-family="'DM Sans', sans-serif" font-size="9" font-weight="400" fill="#555250" letter-spacing="4">TRABALHISTAS</text>
-      </svg>
-    </a>
-    <div class="footer-meta">
-      <p>Base em São Paulo · Atendimento nacional remoto</p>
-      <div style="display:flex; gap:8px; align-items:center;">
-        <a href="https://www.instagram.com/atlascalculos/" target="_blank" rel="noopener" aria-label="Instagram" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px; border:0.5px solid rgba(255,255,255,0.1); border-radius:4px; transition:border-color 0.18s, opacity 0.18s; opacity:0.55;" onmouseover="this.style.opacity='1'; this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.opacity='0.55'; this.style.borderColor='rgba(255,255,255,0.1)'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#c9a84c" stroke="none"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/company/112794314/" target="_blank" rel="noopener" aria-label="LinkedIn" style="display:flex; align-items:center; justify-content:center; width:30px; height:30px; border:0.5px solid rgba(255,255,255,0.1); border-radius:4px; transition:border-color 0.18s, opacity 0.18s; opacity:0.55;" onmouseover="this.style.opacity='1'; this.style.borderColor='rgba(201,168,76,0.4)'" onmouseout="this.style.opacity='0.55'; this.style.borderColor='rgba(255,255,255,0.1)'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="3"/><line x1="8" y1="11" x2="8" y2="16"/><line x1="8" y1="8" x2="8" y2="8.5" stroke-width="2"/><path d="M12 16v-5M12 11c0-1 1-2 2-2s2 1 2 2v5"/></svg>
-        </a>
-      </div>
-      <a href="privacidade.html" style="transition:color 0.18s;">Política de Privacidade</a>
-      <p>© 2026 Atlas Cálculos Trabalhistas</p>
-    </div>
-  </div>
-</footer>
+  <!-- ========== WHATSAPP FLOAT ========== -->
+  <a href="https://wa.me/5511926876472?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20uma%20an%C3%A1lise%20t%C3%A9cnica." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
-<script>
-  document.querySelectorAll('.faq-item').forEach(function(item) {
-    item.addEventListener('click', function() {
-      var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('open'); });
-      if (!isOpen) item.classList.add('open');
-    });
-  });
-
-  function isWhatsAppUrl(url) {
-    return /(?:wa\.me|api\.whatsapp\.com|whatsapp\.com)/i.test(url || '');
-  }
-
-  function getWhatsAppLabel(element, fallbackLabel) {
-    if (element) {
-      var explicitLabel = element.getAttribute('data-whatsapp-label');
-      if (explicitLabel) return explicitLabel;
-
-      var ariaLabel = element.getAttribute('aria-label');
-      if (ariaLabel) return ariaLabel.trim();
-
-      var text = element.textContent ? element.textContent.replace(/\s+/g, ' ').trim() : '';
-      if (text) return text;
-    }
-
-    return fallbackLabel || 'whatsapp';
-  }
-
-  function trackWhatsAppClick(label) {
-    if (typeof gtag !== 'function') return;
-
-    gtag('event', 'whatsapp_click', {
-      event_category: 'conversao',
-      event_label: label || 'whatsapp',
-      transport_type: 'beacon'
-    });
-  }
-
-  function enviarWhatsApp(trigger) {
-    var nome = document.getElementById('f-nome') ? document.getElementById('f-nome').value.trim() : '';
-    var caso = document.getElementById('f-caso') ? document.getElementById('f-caso').value.trim() : '';
-    if (!nome && !caso) {
-      alert('Por favor, preencha ao menos seu nome ou a descrição do caso.');
-      return;
-    }
-    var msg = 'Olá, gostaria de solicitar uma análise técnica.\n\n';
-    if (nome) msg += '*Nome/Escritório:* ' + nome + '\n\n';
-    if (caso) msg += '*Descrição do caso:* ' + caso;
-    var url = 'https://wa.me/5511926876472?text=' + encodeURIComponent(msg);
-    trackWhatsAppClick(getWhatsAppLabel(trigger, 'formulario_whatsapp'));
-    window.open(url, '_blank');
-  }
-
-  /* ── LGPD Cookie Banner ── */
-  document.addEventListener('DOMContentLoaded', function() {
-    var banner = document.getElementById('lgpd-banner');
-    if (banner && !localStorage.getItem('atlas_lgpd')) {
-      banner.style.display = 'block';
-    }
-
-    /* ── Privacy Modal ── */
-    var privModal = document.getElementById('privacidade-modal');
-    if (privModal) {
-      privModal.addEventListener('click', function(e) {
-        if (e.target === this) this.style.display = 'none';
-      });
-    }
-  });
-  function lgpdAccept() {
-    localStorage.setItem('atlas_lgpd', 'accepted');
-    document.getElementById('lgpd-banner').style.display = 'none';
-  }
-  function lgpdReject() {
-    localStorage.setItem('atlas_lgpd', 'rejected');
-    document.getElementById('lgpd-banner').style.display = 'none';
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('a[href]').forEach(function(link) {
-      if (!isWhatsAppUrl(link.getAttribute('href'))) return;
-
-      link.addEventListener('click', function() {
-        trackWhatsAppClick(getWhatsAppLabel(this));
-      });
-    });
-
-    /* ── GA4: Rastrear cliques no telefone ── */
-    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        gtag('event', 'phone_click', {
-          event_category: 'conversao',
-          event_label: 'Telefone',
-          transport_type: 'beacon'
-        });
-      });
-    });
-
-    /* ── GA4: Rastrear cliques no e-mail ── */
-    document.querySelectorAll('a[href^="mailto:"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        gtag('event', 'email_click', {
-          event_category: 'conversao',
-          event_label: 'Email',
-          transport_type: 'beacon'
-        });
-      });
-    });
-  });
-
-</script>
-
-<!-- FLOATING WHATSAPP BUTTON -->
-<a href="https://wa.me/5511926876472" class="wpp-float" target="_blank" aria-label="Falar pelo WhatsApp" data-whatsapp-label="botao_flutuante_whatsapp">
-  <span class="wpp-float-pulse"></span>
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-
-<!-- LGPD COOKIE BANNER -->
-<div class="lgpd-banner" id="lgpd-banner">
-  <div class="lgpd-inner">
-    <p class="lgpd-text">Este site utiliza cookies essenciais para o funcionamento e análise de desempenho. Ao continuar navegando, você concorda com o uso conforme nossa <a href="#" onclick="document.getElementById('privacidade-modal').style.display='flex'; return false;">Política de Privacidade</a>.</p>
-    <div class="lgpd-actions">
-      <button class="lgpd-accept" onclick="lgpdAccept()">Aceitar</button>
-      <button class="lgpd-reject" onclick="lgpdReject()">Recusar</button>
-    </div>
-  </div>
-</div>
-
-<!-- PRIVACY POLICY MODAL -->
-<div class="priv-modal" id="privacidade-modal">
-  <div class="priv-box">
-    <button class="priv-close" onclick="this.closest('.priv-modal').style.display='none'">&times;</button>
-    <p class="eyebrow">Legal</p>
-    <h2>Política de Privacidade</h2>
-    <p>Última atualização: março de 2026</p>
-
-    <h4>1. Responsável pelo tratamento</h4>
-    <p>Atlas Cálculos Trabalhistas, com base operacional em São Paulo/SP. Contato para questões relacionadas a dados pessoais: <a href="mailto:contato@atlascalculos.com.br">contato@atlascalculos.com.br</a>.</p>
-
-    <h4>2. Dados coletados</h4>
-    <p>Coletamos apenas os dados estritamente necessários para a prestação dos serviços: nome, nome do escritório, telefone, e-mail e informações relativas ao caso encaminhado. Dados de navegação (cookies analíticos) podem ser coletados para melhoria do site.</p>
-
-    <h4>3. Finalidade do tratamento</h4>
-    <p>Os dados pessoais são utilizados exclusivamente para: atendimento e comunicação sobre os serviços solicitados; triagem técnica e execução dos cálculos; análise de desempenho do site (dados anonimizados).</p>
-
-    <h4>4. Compartilhamento</h4>
-    <p>Os dados pessoais não são vendidos, cedidos ou compartilhados com terceiros, exceto quando necessário para o cumprimento de obrigação legal ou regulatória.</p>
-
-    <h4>5. Cookies</h4>
-    <p>Este site utiliza cookies essenciais para funcionamento e cookies analíticos (como Google Analytics) para compreender o uso do site. Você pode recusar cookies não essenciais através do banner exibido no acesso ao site.</p>
-
-    <h4>6. Armazenamento e segurança</h4>
-    <p>Os dados são armazenados em ambiente seguro e mantidos apenas pelo tempo necessário ao atendimento da finalidade para a qual foram coletados, respeitando os prazos legais aplicáveis.</p>
-
-    <h4>7. Direitos do titular</h4>
-    <p>Nos termos da Lei Geral de Proteç
+  <script src="/js/tracking-config.js"></script>
+  <script src="/js/analytics.js"></script>
+  <script src="/js/main.js"></script>
+</body>
+</html>

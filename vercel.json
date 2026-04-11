@@ -1,0 +1,14 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/privacidade.html", "destination": "/politica-de-privacidade/", "permanent": true },
+    { "source": "/calculos-iniciais-trabalhistas.html", "destination": "/calculos-iniciais/", "permanent": true },
+    { "source": "/liquidacao-de-sentenca-trabalhista.html", "destination": "/liquidacao-de-sentenca/", "permanent": true },
+    { "source": "/impugnacao-de-calculos-trabalhistas.html", "destination": "/impugnacao-de-calculos/", "permanent": true },
+    { "source": "/contingencia-trabalhista.html", "destination": "/calculos-de-contingencia/", "permanent": true },
+    { "source": "/revisao-de-calculos-trabalhistas.html", "destination": "/revisao-de-calculos/", "permanent": true },
+    { "source": "/calculos-trabalhistas-para-advogados.html", "destination": "/calculos-para-advogados/", "permanent": true }
+  ]
+}

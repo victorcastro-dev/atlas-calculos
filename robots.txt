@@ -1,4 +1,6 @@
 User-agent: *
-Allow: /
+Disallow: /.claude/
+Disallow: /.tmp-edge-profile/
+Disallow: /node_modules/
 
 Sitemap: https://atlascalculos.com.br/sitemap.xml
