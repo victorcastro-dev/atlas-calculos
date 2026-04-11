@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>Atlas Cálculos</title>
+  <rect width="64" height="64" fill="#0d0e0e"/>
+  <g fill="none" stroke="#c9a84c" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="32 7.38 7.38 54.15 56.62 54.15" stroke-width="3.4"/>
+    <line x1="17.23" y1="38.15" x2="46.77" y2="38.15" stroke-width="3.2"/>
+    <line x1="12.31" y1="54.15" x2="51.69" y2="54.15" stroke-width="2.4"/>
+    <line x1="2.46" y1="57.85" x2="61.54" y2="57.85" stroke-width="1.5" opacity="0.45"/>
+  </g>
+  <circle cx="32" cy="7.38" r="3.8" fill="#c9a84c"/>
+</svg>
