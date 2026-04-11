@@ -2056,6 +2056,16 @@ strong {
   overflow-wrap: anywhere;
 }
 
+@media (min-width: 1024px) {
+  .footer__contact-value--email {
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    font-size: clamp(0.76rem, 0.73rem + 0.12vw, 0.8125rem);
+    letter-spacing: -0.01em;
+  }
+}
+
 .footer__bottom {
   display: flex;
   flex-wrap: wrap;
